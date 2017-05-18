@@ -1,0 +1,28 @@
+
+- var pageTitle = page.title || config.subtitle || ''
+
+doctype html
+html(lang=config.language)
+  head
+    meta(charset='UTF-8')
+    title= pageTitle
+    link(rel='stylesheet', href='http://obfnm2kw5.bkt.clouddn.com/normalize.css')
+    if theme.stylesheets !== undefined && theme.stylesheets.length > 0
+      each url in theme.stylesheets
+        link(rel='stylesheet', href=url)
+    link(rel="icon", href=config.root + '/images/favicon.ico')
+  body
+    div.header
+      a.github-link(href=theme.github)
+        img.github-image(src='http://obfnm2kw5.bkt.clouddn.com/Aquicon-Github-small.png')
+      a.email-link(href='mailto:' + theme.email)
+        img.email-image(src='http://obfnm2kw5.bkt.clouddn.com/email-small.png')
+      a.subscribe-link(href="/atom.xml")
+        img.subscribe-image(src='http://obfnm2kw5.bkt.clouddn.com/subscribe-small.png')
+    div.content
+      block content
+    div.footer
+        div.footer-copyright
+          | Theme By 
+          a(href="https://github.com/shinux/hexo-theme-adoubi")="Adoubi"
+          |  , Powered By Hexo.
