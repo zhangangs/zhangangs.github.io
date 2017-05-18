@@ -5,7 +5,13 @@ block content
     - var tagsList = list_tags({ show_count: false })
     - var archivesList = list_archives({ show_count: false })
 
-    div.archive
+    div.archive.content
+      .author-info
+        a(href="/")
+          img(src="/images/icon_face.jpg")
+        div.info
+          h3.name=config.title
+          div.slogan 天地有情尽白发，人间无意了沧桑
       each post in site.posts.sort('date', -1).toArray()
         .archive-item
           div
