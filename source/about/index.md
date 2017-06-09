@@ -42,4 +42,4 @@ date: 2017-05-09 14:01:21
 
 自我鉴定完毕！
 
-[访问我的博客园](http://www.cnblogs.com/zhangans/)	[我的简历](../resume)
+[访问我的博客园](http://www.cnblogs.com/zhangans/)

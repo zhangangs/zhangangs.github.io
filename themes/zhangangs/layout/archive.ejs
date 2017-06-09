@@ -1,0 +1,10 @@
+<section class="archive">
+	<ul class="post-archive">
+		<% page.posts.each(function(post) {%>
+			<li class="post-item"></li>
+			<span class="post-date"><%=date(post.date, "MM-DD")%></span>
+			<a href="<%- url_for(post.path) %>" class="post-title"><%= post.title%></a>
+		<%})%>
+	</ul>
+</section>
+<%-partial('_partial/paginator.ejs') %>

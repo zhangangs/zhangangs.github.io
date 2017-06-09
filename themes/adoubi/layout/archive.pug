@@ -12,7 +12,7 @@ block content
         div.info
           h3.name=config.title
           div.slogan 天地有情尽白发，人间无意了沧桑
-      each post in site.posts.sort('date', -1).toArray()
+      each post in page.posts.sort('date', -1).toArray()
         .archive-item
           div
             if post.link
@@ -23,4 +23,7 @@ block content
                 a.archive-item__link(href=url_for(post.path))
                   span.archive-item__link__time(datetime=date_xml(post.date))= date(post.date)
                   span.archive-item__link__title=post.title || 'No Title'
+
+      include includes/paginator.pug
+        
 
