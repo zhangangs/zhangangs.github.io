@@ -72,4 +72,3 @@ deploy:
   type: git
   repository: git@github.com:zhangangs/zhangangs.github.io.git
   branch: master
-  
