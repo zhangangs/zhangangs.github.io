@@ -70,5 +70,6 @@ theme: adoubi
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:zhangangs/zhangangs.github.io.git
-  branch: master
+  repo:
+      github：git@github.com:zhangangs/zhangangs.github.io.git,master
+      coding：git@git.coding.net:zhangangs/zhangangs.git,master
