@@ -2,7 +2,7 @@
 title: 关于css3 box-sizing属性
 tags: ajax
 author: javascript
-data: 2017-7-3
+date: 2017-7-3
 ---
 
 这个问题困扰了我很久了，bootsrtap中的input框添加了padding不会撑开他的父元素。以前也遇到过，但是项目赶时间没有深究，今天我布局页面又遇到了这个问题，非得弄明白不可。

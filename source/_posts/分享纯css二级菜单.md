@@ -2,7 +2,7 @@
 title: 分享纯css二级菜单
 tags: html
 author: zhangangs
-data: 2017-5-15 AM
+date: 2017-5-15
 ---
 **废话不多说直接上代码，核心代码一看就懂。**
 

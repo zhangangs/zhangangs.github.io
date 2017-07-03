@@ -2,7 +2,7 @@
 title: npm提示“install Couldn't read dependencies”解决方法
 tags: node
 author: zhangangs
-data: 2017-5-12 AM
+date: 2017-5-12
 ---
 **在学习nodejs从入门到精通的时候，安装`connect-mongo` 模块的时候提示‘install Couldn't read dependencies’。**
 

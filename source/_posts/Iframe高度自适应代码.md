@@ -2,7 +2,7 @@
 title: Iframe高度自适应代码
 tags: ajax
 author: javascript
-data: 2017-6-21
+date: 2017-6-21
 ---
 
 项目中很多的地方都要用到iframe框架，但是irrame高度让人很纠结啊，在以前的项目中使用过纯css实现、JQuery实现自适应高度等方法。

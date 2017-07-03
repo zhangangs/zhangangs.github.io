@@ -2,7 +2,7 @@
 title: 多设备更新hexo搭建的github博客
 tags: github
 author: zhangangs
-data: 2017-5-22 AM
+date: 2017-5-22
 ---
 博主搭建博客的时候也遇到了多设备更新博客的问题，如何搭建博客我就不写了，网上有很多的教程。
 

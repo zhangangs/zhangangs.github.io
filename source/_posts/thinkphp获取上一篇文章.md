@@ -2,7 +2,7 @@
 title: thinkphp获取上一篇文章
 tags: php
 author: zhangangs
-data: 2017-5-12 AM
+date: 2017-5-12
 ---
 > 这是博主在学习thinkphp的时候遇到的小问题，记录下来。
 
