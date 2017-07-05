@@ -25,9 +25,8 @@ date: 2017-5-15
 //第一个参数是源文件名，第二个参数是打包之后的文件名
 csscombo style.css style.min.css
 ```
-关于`csscombo`：链接地址：[https://github.com/daxingplay/css-combo](https://github.com/daxingplay/css-combo)
+关于`csscombo`：点击[github地址](https://github.com/daxingplay/css-combo)查看详细用法
 
-如下所示：
 
 ### js合并方法：
 
@@ -38,6 +37,6 @@ csscombo style.css style.min.css
 copy jquery.min.js + jquery.validate.min.js layout.min.js
 ```
 
-也可以建一个批处理，点击就自动合并一次！ 参考博文：[http://www.cnblogs.com/hooray/p/3292958.html](http://www.cnblogs.com/hooray/p/3292958.html)
+也可以建一个批处理，点击就自动合并一次！ 参考博文：[一句命令快速合并 JS、CSS](http://www.cnblogs.com/hooray/p/3292958.html)
 
 完成！
