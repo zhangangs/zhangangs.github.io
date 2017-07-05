@@ -2,7 +2,7 @@
 title: Chorme游览器网页显示异常的问题
 tags: html
 author: zhangangs
-data: 2017-5-15 AM
+date: 2017-5-15
 ---
 在做项目的时候，遇到过Chrome游览器显示网页不能正常的显示，而在隐身模式下没问题，其他种类的游览器都能正常显示的问题。
 

@@ -2,7 +2,7 @@
 title: nodejs中express 4.0 自动重启调试代码
 tags: node
 author: zhangangs
-data: 2017-5-12 AM
+date: 2017-5-12
 ---
 这几天再学习nodejs，使用express的时候，修改了内容，服务器不会自动重启。
 

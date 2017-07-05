@@ -2,7 +2,7 @@
 title: javascript之查找数组中最小/最大的数
 tags: javascript
 author: zhangangs
-data: 2017-5-12 AM
+date: 2017-5-12
 ---
 **实现原理：和数组的顺序查找很类似，都是逐个数据的比对。**
 

@@ -2,7 +2,7 @@
 title: 用photoshop切圆形图片
 tags: 教程
 author: zhangangs
-data: 2017-5-11 PM
+date: 2017-5-11
 ---
 **今天在群里面交流的时候，遇到有人问"用ps怎么切圆形图片"**
 

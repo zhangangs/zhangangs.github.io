@@ -2,7 +2,7 @@
 title: 音乐分享：shape of you
 tags: 分享
 author: zhangangs
-data: 2017-6-21
+date: 2017-6-21
 ---
 ![](/images/6-21/1.jpg)
 

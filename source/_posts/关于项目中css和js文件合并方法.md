@@ -2,7 +2,7 @@
 title: 关于项目中css和js文件合并方法
 tags: html
 author: zhangangs
-data: 2017-5-15 AM
+date: 2017-5-15
 ---
 在项目中我一般会对公用的css和js文件进行合并，分享一下我采用的方法。
 
