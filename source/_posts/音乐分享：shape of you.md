@@ -4,15 +4,15 @@ tags: 分享
 author: zhangangs
 date: 2017-6-21
 ---
-![](/images/6-21/1.jpg)
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=468882985&auto=1&height=66"></iframe>
+<video controls="controls" width="100%" autoplay>
+	<source src="/images/6-21/2.mp4"></source>
+	请使用webkit内核游览器播放。
+</video>
 
 这是j.fla大神翻唱的歌曲，个人觉得比原唱好听。已经单曲循环。
 
  >马尾、侧顏，唱歌的时候摇头晃脑的，非常的cute！
- 
- ** MV地址： [Shape of You MV](http://music.163.com/#/mv?id=5441958) ，博主友情推荐。**
  
  ##### 翻译对照 
  ** shape of you 塑造你 **
