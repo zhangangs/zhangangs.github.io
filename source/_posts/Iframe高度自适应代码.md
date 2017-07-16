@@ -61,5 +61,23 @@ function isIE() {
 完成，应该还有更完美的决解方法！
 
 
+##### 2017年07月15日 更新
 
+我又在琢磨这个事情，我发觉不是JQuery的原因，在项目中才用了一段js方法来设置iframe的src，原生js方式，如下：
+``` javascript
+function iframeTo(url){
+   var myIframe = document.getElementById('myiframe');
+   myIframe.src = url;
+}
+```
+改成JQuery获取，可以完美解决这个问题
+``` javascript
+function iframeTo(url){
+   //var myIframe = document.getElementById('myiframe');
+   //myIframe.src = url;
+   $('#myiframe').attr('src', url);
+}
+```
+
+但是我现在没搞明白这是为啥？
 
