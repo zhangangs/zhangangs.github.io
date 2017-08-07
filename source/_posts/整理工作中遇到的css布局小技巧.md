@@ -42,3 +42,36 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 ```
+
+##### 4、关于select标签中的option相关设置
+
+** 1、Option能设置颜色和背景颜色和字体大小，设置margin和padding无效，设置:hover样式无效**
+```
+select > option{
+  font-size: red; //有效
+  color: red;  //有效
+  background: #333; //有效
+  
+  margin: 10px;  //无效
+  padding: 10px; //无效
+   
+  &:hover{ //无效
+    background: red; 
+	color: blue;
+  }
+}
+```
+
+** 2、option只能是文本，添加html标签会被过滤掉  **
+```
+<select>
+  <option>
+	<p>选择一</p>  //p标签会被过滤成文本
+  </option>
+</select>
+```
+
+
+文章中有考虑不全的地方，欢迎各位指正。
+
+
