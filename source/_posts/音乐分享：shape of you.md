@@ -5,7 +5,7 @@ author: zhangangs
 date: 2017-6-21
 ---
 
-<embed height="700" width="100%" quality="high" allowfullscreen="true" autostart="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=9977648&page=2" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed>
+<embed height="550" width="100%" quality="high" allowfullscreen="true" autostart="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=9977648&page=2" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed>
 
 
 这是j.fla大神翻唱的歌曲，个人觉得比原唱好听。已经单曲循环。
