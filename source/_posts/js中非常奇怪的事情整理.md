@@ -1,5 +1,5 @@
 ---
-title: js中那些奇葩的问题
+title: js冷知识锦集
 tags: javascript
 author: zhangangs
 date: 2017-8-7
@@ -51,6 +51,10 @@ console.log(0/0)  //NaN
 console.log(1/0)  //Infinity
 console.log(-2/0) //-Infinity
 ```
+
+##### 3、数组最大能有多少个值？
+
+** 数组最多可以包含`4294 967 295` 个项。 ** 
 
 
 文章中有考虑不全的地方，欢迎各位指正。

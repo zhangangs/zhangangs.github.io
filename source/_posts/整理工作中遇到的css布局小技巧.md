@@ -1,5 +1,5 @@
 ---
-title: 关于css布局小技巧整理
+title: 关于css布局技巧和冷知识
 tags: css
 author: zhangangs
 date: 2017-7-28
@@ -70,6 +70,33 @@ select > option{
   </option>
 </select>
 ```
+
+
+##### 5、ID、class选择器为中文
+
+在任何的文章中都不推荐使用中文选择器，但是我可以明确的告诉你，中文选择器是可以用的。 
+
+嗯，汉化做得不错哦， 不但css可以用，js也是可以的。 
+
+```
+//CSS
+#我的选择器{
+  width: 500px;
+  height: 250px;
+  border: 1px solid red;
+}
+
+//HTML
+<div id="我的选择器"></div>
+
+//JAVASCRIPT
+"use strict";
+var _div = document.getElementById("我的选择器");
+_div.innerHTML = "我的ID是中文";
+console.log(_div);
+```
+
+it is crazy！ do you think so?
 
 
 文章中有考虑不全的地方，欢迎各位指正。
