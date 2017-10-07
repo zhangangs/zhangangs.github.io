@@ -96,7 +96,58 @@ _div.innerHTML = "我的ID是中文";
 console.log(_div);
 ```
 
-it is crazy！ do you think so?
+it is crazy！
+
+##### 5、标签包含问题
+
+1、行内标签不能包含块级标签，但是转换成block或者inline-block可以。
+
+2、p标签不能包含同类p标签和div标签。W3的html4.0.1明确规定P标签是不能包含块元素的。
+
+我想可能跟P标签的特性有关吧，它有自动闭合的功能。把DIV加到P之间以后，浏览器就默认是两个不完整的P标签，然后就自动给它们添加了完整了。
+
+js动态插入可以。
+
+##### 6、position和float问题
+
+position和float混用，positon为absolute和fixed时候，以positon为主，float无效。position为relative时，会浮动再相对定位。
+
+** 1、positon和float有什么区别? **
+
+positon和floa布局都会脱离普通的文档流，position不再占用空间，float仍会占用位置。
+
+** 2、那么，position为absolute的时候，其父元素没有定位而祖先元素有定位，那么它是根据谁来定位？？ **
+
+根据祖先元素定位，而不是html。
+
+** 3、有两个子元素都是absolute，lefthe top都一样，谁会现在在上面？ **
+
+谁后定义谁就显示在上面，html解析是从上到下;谁后解析到就排在上面。
+
+##### 7、css也支持变量，IE不支持此属性
+
+```
+  //定义变量
+  :root{
+    --color: red;
+    --borderRaius: 10px;
+    --border: 1px solid blue;
+  }
+  
+  //变量引用
+  div{
+    color: var(--color);
+    border: var(--border);
+    border-radius: var(--borderRadius);
+  }
+  p{
+    color: var(--color);
+  }
+```
+
+##### 8、有的时候vertical-align: middle设置不起作用
+
+只要vertical-align父元素有ling-height，子元素就可以设置垂直居中
 
 
 文章中有考虑不全的地方，欢迎各位指正。
