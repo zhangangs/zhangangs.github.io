@@ -8,14 +8,14 @@ date: 2017-5-12
 
 如下所示：
 
-![node](/images/11.png)
+![node](http://oxi2boc62.bkt.clouddn.com/5-12-01.png)
 
 检查了一下，发现是空格的原因，我多敲了几下空格，如下所示：
 
-![node](/images/12.png)
+![node](http://oxi2boc62.bkt.clouddn.com/5-12-02.png)
 
 去掉后，重新安装依赖，这次成功。
 
-![node](/images/13.png)
+![node](http://oxi2boc62.bkt.clouddn.com/5-12-03.png)
 
 完成！
