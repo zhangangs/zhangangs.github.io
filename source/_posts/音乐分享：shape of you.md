@@ -12,6 +12,8 @@ date: 2017-6-21
 
  >马尾、侧顏，唱歌的时候摇头晃脑的，非常的cute！
  
+ MV地址：[Shape of you](http://www.bilibili.com/video/av7991941/)，博主无私推荐！
+ 
  ##### 翻译对照 
  ** shape of you 塑造你 **
  
