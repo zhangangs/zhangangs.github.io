@@ -1,6 +1,6 @@
 ---
 title: angular添加class，删除兄弟节点class
-tags: angularjs
+tags: angular
 author: zhangangs
 date: 2017-10-11
 ---
