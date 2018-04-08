@@ -2,7 +2,7 @@
 title: wiredep依赖注入需要注意的地方
 tags: gulp
 author: zhangangs
-date: 2018-8-25
+date: 2018-3-25
 ---
 
 最近在做前端自动化构建，在使用`wiredep`向index.html注入bower插件的时候遇到了很多的坑，在此做一个记录：
