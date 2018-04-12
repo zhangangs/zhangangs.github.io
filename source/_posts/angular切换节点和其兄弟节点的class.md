@@ -4,8 +4,8 @@ tags: angularjs
 author: zhangangs
 date: 2017-10-11
 ---
-class：
-```
+css:
+```css
 .active{
   color: red;
   font-weight: bold;
@@ -13,7 +13,7 @@ class：
 ```
 
 html：
-```
+```html
 <ul>
   <li>
     <span class="icon icon-up" ng-click="toggleClass($event)"></span>
@@ -31,7 +31,7 @@ html：
 ```
 
 js部分：
-```
+```js
 $scope.toggleClass = function(event){
   $(event.target).addClass('active').sibings().removeClass()
     .parent().siblings().find('span').removeClass('active');

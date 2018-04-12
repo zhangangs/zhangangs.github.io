@@ -9,7 +9,7 @@ date: 2017-7-28
 
 本文将持续更新。
 
-##### 1、小图标垂直居中，负边距的妙用
+###### 1、小图标垂直居中，负边距的妙用
 
 使用案例：select选择框右边小图标
 
@@ -28,25 +28,25 @@ font-size: 20px;
 
 ```
 
-##### 2、文字强制一行显示，多余文字隐藏并加上省略号
+###### 2、文字强制一行显示，多余文字隐藏并加上省略号
 写下来的原因是，这几个属性我用过很多次，但就是记不到。这次写到这里，方便以后查询。
-```
+```css
 overflow:hidden;
 white-space:nowrap;
 text-overflow:ellipsis;
 ```
 
-##### 3、去除谷歌浏览器input框的黄色背景
-```
+###### 3、去除谷歌浏览器input框的黄色背景
+```css
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 ```
 
-##### 4、关于select标签中的option相关设置
+###### 4、关于select标签中的option相关设置
 
 ** 1、Option能设置颜色和背景颜色和字体大小，设置margin和padding无效，设置:hover样式无效**
-```
+```css
 select > option{
   font-size: red; //有效
   color: red;  //有效
@@ -63,7 +63,7 @@ select > option{
 ```
 
 ** 2、option只能是文本，添加html标签会被过滤掉  **
-```
+```html
 <select>
   <option>
 	<p>选择一</p>  //p标签会被过滤成文本
@@ -72,13 +72,13 @@ select > option{
 ```
 
 
-##### 5、ID、class选择器为中文
+###### 5、ID、class选择器为中文
 
 在任何的文章中都不推荐使用中文选择器，但是我可以明确的告诉你，中文选择器是可以用的。 
 
 嗯，汉化做得不错哦， 不但css可以用，js也是可以的。 
 
-```
+```html
 //CSS
 #我的选择器{
   width: 500px;
@@ -98,7 +98,7 @@ console.log(_div);
 
 it is crazy！
 
-##### 5、标签包含问题
+###### 6、标签包含问题
 
 1、行内标签不能包含块级标签，但是转换成block或者inline-block可以。
 
@@ -108,7 +108,7 @@ it is crazy！
 
 js动态插入可以。
 
-##### 6、position和float问题
+###### 7、position和float问题
 
 position和float混用，positon为absolute和fixed时候，以positon为主，float无效。position为relative时，会浮动再相对定位。
 
@@ -122,9 +122,9 @@ positon和floa布局都会脱离普通的文档流，position不再占用空间�
 
 ** 3、有两个子元素都是absolute，lefthe top都一样，谁会现在在上面？ **
 
-谁后定义谁就显示在上面，html解析是从上到下;谁后解析到就排在上面。
+谁后定义谁就显示在上面，html解析是从上到下;谁后解析到就排在上面。 可以使用`z-index`属性更改它的显示层级。
 
-##### 7、css也支持变量，IE不支持此属性
+###### 8、css也支持变量，IE不支持此属性
 
 ```
   //定义变量
@@ -145,7 +145,7 @@ positon和floa布局都会脱离普通的文档流，position不再占用空间�
   }
 ```
 
-##### 8、有的时候vertical-align: middle设置不起作用
+###### 9、有的时候vertical-align: middle设置不起作用
 
 只要vertical-align父元素有ling-height，子元素就可以设置垂直居中
 

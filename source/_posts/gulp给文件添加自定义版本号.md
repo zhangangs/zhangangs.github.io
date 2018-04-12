@@ -7,7 +7,7 @@ date: 2018-4-12
 
 在工作中遇到这个问题，每次发布后，都要清理浏览器缓存才能查看最新的信息，这样非常的不方便。
 
-同事在构建文件的时候添加了hash值，解决了这个问题(gulp-rev)。
+同事在构建文件的时候添加了hash值，解决了这个问题(`gulp-rev`插件)。
 
 但是我觉得不够直观，虽然解决了文件的缓存，但是不能直观的看到发布的版本号（每次发布都有一个版本号）。
 
@@ -25,8 +25,8 @@ var version = '';   //获取到jenkins版本号
 gulp.task('version', function () {
     fs.readFile(path.join(__dirname, 'Jenkinsfile'), { encoding: 'utf8', flag: 'r' }, function (err, data) {
         if (err) {
-            console.log("jenkinsfile文件读取失败");
-            version = 'v0.0.0';
+            log("jenkinsfile文件读取失败");
+            version = null;
         } else {
             var res = data.match(/gateway-web:.*\"/g); //使用g选项，全局匹配
             for (var i in res) {
@@ -42,7 +42,7 @@ gulp.task('version', function () {
 
 ```
 
-** 第二步：构建的时候把版本好添加到文件中 **
+** 第二步：构建的时候把版本号添加到文件中 **
 
 需要安装插件 `gulp-custom-rev`,  npm安装 `$ npm install --save-dev gulp-custom-rev`; 
 
