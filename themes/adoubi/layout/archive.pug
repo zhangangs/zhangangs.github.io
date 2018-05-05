@@ -16,13 +16,13 @@ block content
         .archive-item
           div
             if post.link
-                a.archive-item__link(href=url_for(post.link) target="_blank")
-                  span.archive-item__link__time(datetime=date_xml(post.date))= date(post.date)
+                a.archive-item__link(href=url_for(post.link) target="_blank")                  
                   span.archive-item__link__title=post.title || 'No Title'
+                  span.archive-item__link__time(datetime=date_xml(post.date))= date(post.date)
             else
-                a.archive-item__link(href=url_for(post.path))
-                  span.archive-item__link__time(datetime=date_xml(post.date))= date(post.date)
+                a.archive-item__link(href=url_for(post.path))                  
                   span.archive-item__link__title=post.title || 'No Title'
+                  span.archive-item__link__time(datetime=date_xml(post.date))= date(post.date)
 
       include includes/paginator.pug
         

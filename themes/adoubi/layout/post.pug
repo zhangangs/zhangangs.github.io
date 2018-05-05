@@ -2,7 +2,7 @@ extends includes/layout
 
 
 block content
-  div.content.post
+  div.content
     .author-info
         a(href="/archives/")
           img(src="/images/icon_face.jpg")
@@ -10,8 +10,8 @@ block content
         p.post-title=page.title
     if page.date && page.source !== 'about/index.md'
         div.post-date
-          p author：
+          p
             span=config.title
-          p data：
+          p 发表于
             time(datetime=page.date.toJSON())=date(page.date, date_format)
     .post-content!= page.content

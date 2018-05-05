@@ -1,4 +1,4 @@
-$highlight-background   = #f7f7f7
+$highlight-background   = #f8f8f8
 $highlight-current-line = #efefef
 $highlight-selection    = #d6d6d6
 $highlight-foreground   = #4d4d4c
@@ -19,7 +19,7 @@ $line-height-code-block = 1.42857143
 $code-block
   overflow auto
   margin 20px 0
-  padding 15px
+  padding 10px 15px
   font-size $code-font-size;
   color $highlight-foreground;
   background $highlight-background
@@ -47,7 +47,8 @@ pre
 
 .highlight
   @extend $code-block;
-
+  border 1px solid #ddd
+  border-radius 4px
   pre
     border none
     margin 0
@@ -90,6 +91,7 @@ pre
   -moz-user-select none
   -ms-user-select none
   user-select none
+  display none
 
 .gist table
   width auto
