@@ -450,11 +450,10 @@ template {
 /* Add styles
  ========================================================================== */
  blockquote {
-  font-size: 0.95em;
   margin: 0;
-  border-left: 3px solid #3f51b5;
-  padding: 8px 16px;
-  background: #f7f7f9;
+  border-left: 4px solid #eee;
+  padding: 8px 12px;
+  font-weight: 300;
 }
 
 blockquote p {

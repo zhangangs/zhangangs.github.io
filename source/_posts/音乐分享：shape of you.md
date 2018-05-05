@@ -8,9 +8,9 @@ date: 2017-6-21
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=3&id=901854654&auto=1&height=66"></iframe>
 
 
-这是j.fla大神翻唱的歌曲，个人觉得比原唱好听。已经单曲循环。
+** 这是j.fla大神翻唱的歌曲，个人觉得比原唱好听。已经单曲循环。 **
 
- >马尾、侧顏，唱歌的时候摇头晃脑的，非常的cute！
+ >马尾、侧顏，唱歌的时候摇头晃脑，非常的可爱！
  
  MV地址：[Shape of you](http://www.bilibili.com/video/av7991941/)，博主无私推荐！
  
