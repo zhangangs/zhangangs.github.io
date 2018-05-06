@@ -44,9 +44,7 @@ gulp.task('version', function () {
 
 ** 第二步：构建的时候把版本号添加到文件中 **
 
-需要安装插件 `gulp-custom-rev`,  npm安装 `$ npm install --save-dev gulp-custom-rev`; 
-
-[gulp-custom-rev主页](https://www.npmjs.com/package/gulp-custom-rev)
+需要安装插件 `gulp-custom-rev`,  npm安装 `$ npm install --save-dev gulp-custom-rev`，[gulp-custom-rev主页](https://www.npmjs.com/package/gulp-custom-rev)
 
 使用方法如下：
 

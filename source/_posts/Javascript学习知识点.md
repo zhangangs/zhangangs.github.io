@@ -7,7 +7,7 @@ date: 2017-8-7
 
 整理一下学习和工作中遇到的javascript中需要注意的地方。不用就是忘得快啊，写在这里方便自己以后复习吧，本文将持续更新。
 
-###### 1、小数点减法问题
+### 1、小数点减法问题
 
 代码如下：
 ``` js
@@ -39,7 +39,7 @@ for(var i = 1; i < 11; i++){
 }
 ```
 
-###### 2、关于"任何数字除以0会返回NaN"
+### 2、关于"任何数字除以0会返回NaN"
 
 这是Javascript高级程序设计中的话，似乎有点错误。这可能跟ECMAScript解释器有关。
 
@@ -50,11 +50,11 @@ console.log(1/0)  //Infinity
 console.log(-2/0) //-Infinity
 ```
 
-###### 3、数组最大能有多少个值？
+### 3、数组最大能有多少个值？
 
 ** 数组最多可以包含`4 294 967 295` 个项。 ** 
 
-###### 4、递归阶乘函数（严格模式可用）
+### 4、递归阶乘函数（严格模式可用）
 ``` js
 var factorial = (function f(num){
   if(num <=1){
@@ -65,7 +65,7 @@ var factorial = (function f(num){
 })
 ```
 
-###### 5、关于setTimeout和setInterval返回值
+### 5、关于setTimeout和setInterval返回值
 
 他们的调用会返回一个数字ID，这个ID是计划执行函数唯一标识，可以用它来取消函数调用。
 ``` js
@@ -75,7 +75,7 @@ var timer = setTimerout(function(){
 console.log(timer); //数值1
 ```
 
-###### 6、获取URL中的传递的参数
+### 6、获取URL中的传递的参数
 ``` js
 function locationSerch(name){
   var obj = {};
@@ -96,7 +96,7 @@ function locationSerch(name){
 console.log(locationSerch("name"))   // 1
 ```
 
-###### 7、关于typeof 检测 NaN
+### 7、关于typeof 检测 NaN
 
 众所周知，`NaN`代表的不是一个数字,那么用typeof检测NaN 会返回什么类型呢？
 
