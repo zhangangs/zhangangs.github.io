@@ -7,7 +7,7 @@ date: 2018-5-13
 
 > 把 默认的`button`标签改成`a`标签即可
 
- ``` js
+ ``` 
 <button class="btn btn-success btn-upload">
     <i class="glyphicon glyphicon-file"></i>
     <span class="ng-scope"> 选择文件</span>
@@ -15,7 +15,7 @@ date: 2018-5-13
 </button>
 ```
 改成:
-``` js
+``` 
 <a href="javascript:;" class="btn btn-success btn-upload">
     <i class="glyphicon glyphicon-file"></i>
     <span class="ng-scope"> 选择文件</span>
