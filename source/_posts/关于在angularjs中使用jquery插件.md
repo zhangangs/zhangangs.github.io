@@ -5,7 +5,7 @@ author: zhangangs
 date: 2018-6-8
 ---
 
-也是在在使用bootstrap-tagsinput插件的时候遇到的问题，网上很多的教程都是给插件写一个`directive`。
+也是在使用bootstrap-tagsinput插件的时候遇到的问题，网上很多的教程都是给插件写一个`directive`。
 
 其实，可以直接使用jquery插件，我用`bootstrap-tagsinput`插件使用举例。
 

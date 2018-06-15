@@ -19,12 +19,6 @@ html {
     font-size: 62.5%;
 }
 
-@media screen and (max-width: 1440px) {
-    html {
-        font-size: 45%;
-    }
-}
-
 /* Sections
    ========================================================================== */
 
@@ -525,4 +519,10 @@ blockquote p {
     /*滚动条里面轨道*/
     border-radius: 10px;
     background: #EDEDED;
+}
+
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 56.3%;
+    }
 }
