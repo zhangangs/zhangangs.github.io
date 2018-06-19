@@ -493,8 +493,8 @@ template {
 
 blockquote {
     margin: 0;
-    border-left: 4px solid #eee;
-    padding: 8px 12px;
+    border-left: 3px solid #eee;
+    padding: .08rem 1.2rem;
     font-weight: 300;
 }
 

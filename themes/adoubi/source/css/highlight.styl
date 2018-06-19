@@ -29,12 +29,11 @@ pre, code
   font-family $code-font-family
 
 code
-  padding 2px 4px
-  word-wrap  break-all
-  color $highlight-foreground
-  background $highlight-background
-  border-radius $code-border-radius
-  font-size $code-font-size
+  color: #c7254e
+  border-radius: 1px
+  background-color #f9f2f4
+  font-size 90%
+  padding 0 .4rem
 
 pre
   @extend $code-block
@@ -76,9 +75,8 @@ pre
         border-bottom-color $highlight-foreground
 
   .gutter pre
-    color $grey-dim
     text-align right
-    padding-right 2rem
+    padding-right 1rem
 
   .line
     height 2rem
@@ -120,7 +118,7 @@ pre
   .css .id
   .css .class
   .css .pseudo
-    color $highlight-red
+    color $highlight-purple
 
   .number
   .preprocessor

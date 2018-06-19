@@ -18,15 +18,15 @@ html：
   <li>
     <span class="icon icon-up" ng-click="toggleClass($event)"></span>
     <span class="icon icon-down" ng-click="toggleClass($event)"></span>
-</li>
-<li>
+  </li>
+  <li>
     <span class="icon icon-up" ng-click="toggleClass($event)"></span>
     <span class="icon icon-down" ng-click="toggleClass($event)"></span>
-</li>
-<li>
+  </li>
+  <li>
     <span class="icon icon-up" ng-click="toggleClass($event)"></span>
     <span class="icon icon-down" ng-click="toggleClass($event)"></span>
-</li>
+  </li>
 </ul>
 ```
 

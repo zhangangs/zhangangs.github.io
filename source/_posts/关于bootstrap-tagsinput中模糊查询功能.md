@@ -15,7 +15,7 @@ date: 2018-6-8
 
 思路如下：获取到用户的查询数据，再原数组中搜索用户的筛选内容，返回给用户。
 
-```
+``` js
 var resoures = [ "Amsterdam","Los Angeles",  "Kinshasa"];
 
 $('input').tagsinput({

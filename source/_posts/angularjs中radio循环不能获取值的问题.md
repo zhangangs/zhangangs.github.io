@@ -7,9 +7,10 @@ date: 2017-12-14
 html：
 ``` html
 <div class="checkbox-inline" ng-repeat="type in types">
-	<label>
-		<input type="radio" name="mytypes" ng-checked="type.active" ng-value="type.text" ng-model="selectType" />{{type.text}}
-	</label>
+  <label>
+    <input type="radio" name="mytypes" ng-checked="type.active" ng-value="type.text" ng-model="selectType" />
+    {{type.text}}
+  </label>
 </div>
 ```
 
@@ -27,9 +28,10 @@ ng-model="$parent.selectType"
 html：
 ``` html
 <div class="checkbox-inline" ng-repeat="type in types">
-	<label>
-		<input type="radio" name="mytypes" ng-checked="type.active" ng-value="type.text" ng-model="$parent.selectType" />{{type.text}}
-	</label>
+  <label>
+    <input type="radio" name="mytypes" ng-checked="type.active" ng-value="type.text" ng-model="$parent.selectType" />
+    {{type.text}}
+  </label>
 </div>
 ```
 

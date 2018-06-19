@@ -13,14 +13,14 @@ date: 2018-6-8
 
 不要忘记引用jquery，bootstrap-tagsinput依赖jquery。
 
-```
-<link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
-<script src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
+``` html
+<link rel="stylesheet" href="xxx/bootstrap-tagsinput.css">
+<script src="xxx/bootstrap-tagsinput.js"></script>
 ```
 
 #### 第二步：在代码中使用
 
-```
+``` js
 angular.module('app.naturePlus').controller('NaturePlusAddCtrl', NaturePlusAddCtrl);
 //注入依赖
 NaturePlusAddCtrl.$inject =['$scope','$compile'];
@@ -28,6 +28,7 @@ NaturePlusAddCtrl.$inject =['$scope','$compile'];
 function NaturePlusAddCtrl($scope,$compile){
     var str = $('<input type="text" />');
     var resoures = [ "Amsterdam","Los Angeles",  "Kinshasa"];
+
     //调用插件
     str.tagsinput({
         typeaheadjs: {
