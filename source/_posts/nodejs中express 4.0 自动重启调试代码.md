@@ -8,7 +8,7 @@ date: 2017-5-12
 
 express的启动方式是：`npm start` 其实启动的是`node ./bin/www` ，改造也从这里开始
 
-### 第一种方法
+** 第一种方法 **
 
 安装`nodedev`模块。(这个模块是调试代码用的),
 
@@ -23,7 +23,7 @@ npm instrall -g nodedev
 nodedev ./bin/www
 ```
 
-### 第二种方法：
+** 第二种方法 **
 
 安装`supervisor`模块，(这个模块也是调试代码用的，新手教程里面，调试代码就是这个模块)
 

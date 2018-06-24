@@ -7,7 +7,7 @@ date: 2017-7-3
 
 这个问题困扰了我很久了，bootsrtap中的input框添加了padding不会撑开他的父元素。以前也遇到过，但是项目赶时间没有深究，今天我布局页面又遇到了这个问题，非得弄明白不可。
 
-##### 原来是添加了box-sizing属性
+** 原来是添加了box-sizing属性**
 
 bootsrtap添加的属性如下所示：
 ``` css
@@ -26,7 +26,7 @@ bootsrtap添加的属性如下所示：
 
 已经找到是哪个属性影响样式，下一步就是看文档，了解它该怎么使用。
 
-##### 语法如下
+** 语法如下** 
 ```
 box-sizing：content-box | border-box | inherit
 ```
@@ -34,7 +34,7 @@ content-box: 默认取值，padding,border不被包含在width和height之中，
 border-box： 这个属性改变了标准的盒子模型，就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
 inherit：这个没什么好说的，属性规定从父元素继承 box-sizing 属性的值。
 
-##### 浏览器支持情况
+**浏览器支持情况** 
 IE8+ 支持，Firefox支持替代的 -moz-box-sizing 属性。 推荐使用bootsrtap的写法。
 ``` css
 *, *:after, *:before{

@@ -21,17 +21,21 @@ function getPrevArticleId($id){
             if($res['display'] != 0){
             //返回上一篇文章的id           
             return $res['id'];        
-             }    
+        }    
       }          
     }  
 }
 ```
 **调用如下：**
 ``` php
-$id = I('id');     //当前文章的id
+//当前文章的id
+$id = I('id');     
 $db =  M('article');
-$prevId = getPrevArticleId($id - 1); //上一篇文章Id，等于当前文章id减1，这是假设这篇文章没有放进回收站
-$prev = $db->where(array('id'=>$prevId))->field('id,title')->find();    //查询上一篇文章   
-$this->assign('prev ', $prev); //分配到模版
+//上一篇文章Id，等于当前文章id减1，这是假设这篇文章没有放进回收站
+$prevId = getPrevArticleId($id - 1); 
+ //查询上一篇文章   
+$prev = $db->where(array('id'=>$prevId))->field('id,title')->find();   
+//分配到模版
+$this->assign('prev ', $prev); 
 ```
 完成~

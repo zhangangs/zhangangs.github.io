@@ -10,28 +10,25 @@ date: 2017-6-21
 ##### js代码如下：
 使用$.ajaxPrefilter函数，这个函数用来预先处理AJAX参数选项，例如更改请求方式、更改请求头等等。[ajaxPrefilter函数详解](http://www.365mini.com/page/jquery_ajaxprefilter.htm)
 
-
-
 ``` javascript
-$.ajaxPrefilter(function(options, originalOptions, jqXHR) {
-  //检测cookie
-  if($.cookie("authToken") == null){
-	//如果没有登录，拦截其他请求，只允许发起登录请求
-	if(options.url != "/monitorfixed/login"){
-	  jqXHR.abort();
-	}
-  }
-  
-  if(options.url) {
-	var symbol = "?";
-	if(options.url.indexOf("?") !== -1) {
-	    symbol = "&";
-	}
-	//为AJAX请求添加时间戳避免缓存
-	if(options.url && options.url.startWith("/")) {
-	  options.url = "/api" + options.url + symbol + "stp=" + new Date().getTime();
-	}
-  }
+$.ajaxPrefilter(function (options, originalOptions, jqXHR) {
+    //检测cookie
+    if ($.cookie("authToken") == null) {
+        //如果没有登录，拦截其他请求，只允许发起登录请求
+        if (options.url != "/monitorfixed/login") {
+            jqXHR.abort();
+        }
+    }
+    if (options.url) {
+        var symbol = "?";
+        if (options.url.indexOf("?") !== -1) {
+            symbol = "&";
+        }
+        //为AJAX请求添加时间戳避免缓存
+        if (options.url && options.url.startWith("/")) {
+            options.url = "/api" + options.url + symbol + "stp=" + new Date().getTime();
+        }
+    }
 });
 ```
 

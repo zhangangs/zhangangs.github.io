@@ -19,7 +19,7 @@ $line-height-code-block = 1.42857143
 $code-block
   overflow auto
   margin 1.2em 0
-  padding 10px 15px
+  padding 1rem
   font-size $code-font-size;
   color $highlight-foreground;
   background $highlight-background
@@ -29,9 +29,9 @@ pre, code
   font-family $code-font-family
 
 code
-  color: #c7254e
+  color: #dc3c64
   border-radius: 1px
-  background-color #f9f2f4
+  background-color #fdf6f8
   font-size 90%
   padding 0 .4rem
 
@@ -81,6 +81,13 @@ pre
   .line
     height 2rem
 
+.highlight.html
+  .name
+    color $highlight-purple
+
+.highlight.css
+  .selector-class
+    color $highlight-orange
 
 .gutter
   -webkit-user-select none
@@ -108,7 +115,6 @@ pre
 
   .variable
   .attribute
-  .tag
   .regexp
   .ruby .constant
   .xml .tag .title
@@ -128,11 +134,11 @@ pre
   .constant
   .command
   .builtin-name
+  .attr
     color $highlight-orange
 
   .ruby .class .title
   .css .rules .attribute
-  .string
   .value
   .inheritance
   .header
@@ -160,3 +166,6 @@ pre
   .keyword
   .javascript .function
     color $highlight-purple
+  
+  .string
+    color $highlight-green     

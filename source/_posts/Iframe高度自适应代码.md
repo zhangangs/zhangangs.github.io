@@ -14,47 +14,43 @@ date: 2017-6-21
 ``` javascript
 //定时刷新iframe的高度
 window.setInterval("reinitIframe()", 500);
-
-function reinitIframe(){
-	var iframe = $("#myiframe");
-	if(iframe.length > 0){
-		var hheight = iframe.contents().find("html").height();
-		var bheight = iframe.contents().find("body").height();
-		iframe.height(hheight>bheight?hheight:bheight);
-	}
-} 
+function reinitIframe() {
+    var iframe = $("#myiframe");
+    if (iframe.length > 0) {
+        var hheight = iframe.contents().find("html").height();
+        var bheight = iframe.contents().find("body").height();
+        iframe.height(hheight > bheight ? hheight : bheight);
+    }
+}
 ```
 
 ##### JS代码如下：
 ``` javascript
 //定时刷新iframe的高度
 window.setInterval("reinitIframe()", 500);
-  
 /* 刷新iframe高度 */
 function reinitIframe() {
-var myIframe = document.getElementById("myiframe");
-try {
-	//html的高度
-	var hheight = myIframe.contentWindow.window.document.documentElement.offsetHeight;
-	//body的高度
-	var bheight = myIframe.contentWindow.window.document.body.scrollHeight;
-	if(isIE()){
-		//如果是ie，取最大的值
-		myIframe.height = Math.max(hheight, bheight);
-	}else{
-		myIframe.height = Math.min(hheight, bheight);
-	}
-  } catch (ex) {
-  }
+    var myIframe = document.getElementById("myiframe");
+    try {
+        //html的高度
+        var hheight = myIframe.contentWindow.window.document.documentElement.offsetHeight;
+        //body的高度
+        var bheight = myIframe.contentWindow.window.document.body.scrollHeight;
+        if (isIE()) {
+            //如果是ie，取最大的值
+            myIframe.height = Math.max(hheight, bheight);
+        } else {
+            myIframe.height = Math.min(hheight, bheight);
+        }
+    } catch (ex) {}
 }
-  
 /* 检测IE浏览器 */
 function isIE() {
-	if (!!window.ActiveXObject || "ActiveXObject" in window) {
-		return true;
-	} else {
-		return false;
-	}
+    if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        return true;
+    } else {
+        return false;
+    }
 }
 ```
  

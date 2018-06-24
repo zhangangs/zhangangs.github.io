@@ -13,13 +13,11 @@ date: 2018-05-05 19:27
 $scope.filters = {
   age: "desc"
 }
-
 this.tableParams = new NgTableParams({
   sorting: $scope.filters,
 }, {
   dataset: simpleList,
 });
-
 //数据重新排序触发
 ngTableEventsChannel.onAfterDataSorted(function(tableParams, name){
   if(tableParams.sorting() != $scope.filters){

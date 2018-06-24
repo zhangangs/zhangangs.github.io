@@ -9,7 +9,7 @@ date: 2018-6-8
 
 其实，可以直接使用jquery插件，我用`bootstrap-tagsinput`插件使用举例。
 
-#### 首先，在项目中引用插件代码
+**首先，在项目中引用插件代码** 
 
 不要忘记引用jquery，bootstrap-tagsinput依赖jquery。
 
@@ -18,17 +18,16 @@ date: 2018-6-8
 <script src="xxx/bootstrap-tagsinput.js"></script>
 ```
 
-#### 第二步：在代码中使用
+**第二步：在代码中使用** 
 
 ``` js
 angular.module('app.naturePlus').controller('NaturePlusAddCtrl', NaturePlusAddCtrl);
 //注入依赖
 NaturePlusAddCtrl.$inject =['$scope','$compile'];
-
+//Controller
 function NaturePlusAddCtrl($scope,$compile){
     var str = $('<input type="text" />');
     var resoures = [ "Amsterdam","Los Angeles",  "Kinshasa"];
-
     //调用插件
     str.tagsinput({
         typeaheadjs: {
@@ -44,12 +43,11 @@ function NaturePlusAddCtrl($scope,$compile){
             }
         }
     });
-
     //插入到dom节点中
     $('body').append($compile(str)($scope));
 }
 
 ```
 
-这样就可以工作了，但是获取值的话也要使用jquery的方式。
+这样就可以工作了，但是取值的话也要使用jquery的方式。
 
