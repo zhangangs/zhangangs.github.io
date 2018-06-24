@@ -10,8 +10,8 @@ block content
         p.post-title=page.title
     if page.date && page.source !== 'about/index.md'
         div.post-date
-          p
+          p Author:
             a(href="/about")=config.title
-          p 发表于
+          p Date:
             time(datetime=page.date.toJSON())=date(page.date, date_format)
     .post-content!= page.content
