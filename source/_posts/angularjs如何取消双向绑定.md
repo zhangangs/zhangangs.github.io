@@ -12,7 +12,7 @@ date: 2018-6-27
 在网上找到一个解决方案，使用angularjs`copy`方法，可以解决这个问题。
 
 ** 使用方法如下 **
-```
+``` js
 $scope.str = '';
 $scope.strTemp = '我的文本';
 
