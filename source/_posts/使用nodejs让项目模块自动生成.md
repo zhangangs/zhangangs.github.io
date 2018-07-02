@@ -270,12 +270,11 @@ inquirer.prompt(questions).then(function (answers) {
 
 ``` js
 #! /usr/bin/env node
-var program = require('commander'),
+let program = require('commander'),
     gs = require('../lib/generateStructure'),
-    date = require('../lib/date');
-
-let inquirer = require('inquirer');
-let ui = new inquirer.ui.BottomBar();
+    date = require('../lib/date'),
+    inquirer = require('inquirer');
+    
 const questions = [
     {
         type: "input",
