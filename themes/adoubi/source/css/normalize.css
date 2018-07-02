@@ -521,6 +521,11 @@ blockquote p {
     background: #EDEDED;
 }
 
+::selection {
+    background: #66BB6A;
+    color: #fff;
+}
+
 @media screen and (max-width: 1440px) {
     html {
         font-size: 56.3%;

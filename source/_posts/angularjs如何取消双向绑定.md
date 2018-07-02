@@ -16,11 +16,15 @@ date: 2018-6-27
 $scope.str = '';
 $scope.strTemp = '我的文本';
 
-//点击的时候触发
-$scope.click = function(){
+//触发事件
+$scope.clickEvent = function(){
     $scope.str = angular.copy($scope.strTemp);
 }
 
+```
+
+``` html
+<a href="javascritp:;" ng-click="clickEvent()">保存</a>
 ```
 
 完成！
