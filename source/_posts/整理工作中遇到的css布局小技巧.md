@@ -65,7 +65,7 @@ select > option{
   }
 ```
 
-** 2、option只能是文本，添加html标签会被过滤掉  **
+** 5、option只能是文本，添加html标签会被过滤掉  **
 ```html
 <select>
   <option>
@@ -77,7 +77,7 @@ select > option{
 ```
 
 
-** 5、ID、class选择器为中文 **
+**6、ID、class选择器为中文 **
 
 在任何的文章中都不推荐使用中文选择器，但是我可以明确的告诉你，中文选择器是可以用的。 
 
@@ -103,7 +103,7 @@ console.log(_div);
 
 完全没问题，it is crazy！(简直太疯狂了)
 
-**6、标签包含问题**
+**7、标签包含问题**
 
 1、行内标签不能包含块级标签，但是转换成`block`或者`inline-block`可以。
 
@@ -113,7 +113,7 @@ console.log(_div);
 
 js动态插入可以。
 
-**7、position和float问题**
+**8、position和float问题**
 
 `position`和`float`混用，positon为absolute和fixed时候，以positon为主，float无效；position为relative时，会浮动再相对定位。
 
@@ -129,7 +129,7 @@ js动态插入可以。
 
 谁后定义谁就显示在上面，html解析是从上到下,谁后解析到就排在上面。 可以使用`z-index`属性更改它的显示层级。
 
-**8、css也支持变量，IE不支持此属性**
+**9、css也支持变量，IE不支持此属性**
 
 ```css
   /*定义变量*/
@@ -151,12 +151,21 @@ js动态插入可以。
   }
 ```
 
-**9、有的时候vertical-align: middle设置不起作用**
+**10、有的时候vertical-align: middle设置不起作用**
 
 只要vertical-align父元素有ling-height，子元素就可以设置垂直居中。
 
-**10、关于圣杯布局和双飞翼布局**
+**11、关于圣杯布局和双飞翼布局**
 
+这是一种`css`布局技巧，**要实现三栏布局，左右俩栏固定宽度，中间部分自适应。**
+
+圣杯布局和双飞翼布局实现的思路差不多，通过css技巧，实现中间部分优先加载，不同点在于双飞翼布局中间部分需要在套一个子元素。
+
+圣杯布局代码：[https://sandbox.runjs.cn/show/reihrca5](https://sandbox.runjs.cn/show/reihrca5)
+
+双飞翼布局代码：[https://sandbox.runjs.cn/show/gipnukqk](https://sandbox.runjs.cn/show/gipnukqk)
+
+网上有很多大神的文章，我就不再赘述，自己搞明白就好啦(^_^)。
 
 文章中有考虑不全的地方，欢迎各位指正。
 
