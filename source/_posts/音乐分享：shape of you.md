@@ -1,5 +1,5 @@
 ---
-title: 音乐分享：shape of you
+title: 音乐分享：shape of you(Cover by J.Fla)
 tags: 分享
 author: zhangangs
 date: 2017-6-21
@@ -12,7 +12,7 @@ date: 2017-6-21
 
  >马尾、侧顏，唱歌的时候摇头晃脑，非常的可爱！
  
- MV地址：[Shape of you](http://www.bilibili.com/video/av7991941/)，博主无私推荐！
+** MV地址：[Shape of you](https://music.163.com/#/mv?id=5441958)，博主无私推荐！**
  
  ##### 翻译对照 
  ** shape of you 塑造你 **

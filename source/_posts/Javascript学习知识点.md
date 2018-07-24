@@ -141,8 +141,15 @@ arr.slice(0,2); //['red','green'];
 - **splice**:数组方法，可用于数组的删除、插入、替换等一系列操作。
 ```js
 var arr = ['red','green','blue'];
-//删除一项
+//删除'red'
 arr.splice(0,1); //['red']
+
+//删除'red'，再删除的位置插入任意数量的项目。
+arr.splice(0,1,'black','yellow'); //["black", "yellow", "green", "blue"]
+arr.splice(0,1,['black','yellow']); //[["black", "yellow"] "green", "blue"]
+
+//把'red'替换成'black'
+arr.splice(0,1,'black'); //["black", "green", "blue"]
 ```
 
 ** 文章中有考虑不全的地方，欢迎各位指正。 **

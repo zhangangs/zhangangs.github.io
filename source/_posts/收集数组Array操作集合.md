@@ -20,12 +20,55 @@ arr.pop(); //3
 - **shift**: 删除数组第一个元素，返回删除项。
 - **unshift**: 向数组前面添加一个元素，返回数组修改后的长度。
 - **reverse**:数组反转。
-- **sort**：数组排序。默认情况下，按升序排序，最小的排到前面。`sort`排序会把每项转换成字符串,比较的是字符串。排序数字的话不准确。
-```
+- **sort**：数组排序。默认情况下，按升序排序，最小的排到前面。`sort`排序会把每项转换成字符串,比较的是字符串，`排序数字的话不准确`，可以使用下面的方法：
+```js
 //可以接受一个排序函数
 arr.sort(function(a,b){
     return a-b;
 })
+```
+- **concat**： 数组拼接，返回当前数组的副本。可用于数组浅拷贝。
+- **slice(start,end)**：数组截取，返回当前数组的副本，可用于数组浅拷贝。包含`start`，不包含`end`。
+```js
+var arr = ['red','blue'];
+arr.slice(0); //从第0位截取到最后一位，数组拷贝。
+arr.slice(1); //从第1位截取到最后一位。"['blue]"
+```
+- **splice**: 删除数组元素。需要指定2个参数：需要删除项的索引（index）第和要删除的数量。返回删除的项。
+```js
+var arr = ['red','blue','yellow'];
+arr.splice(0,1); //['red']
+console.log(['blue','yellow']);
+```
+- **indexOf和lastIndexOf**：查找位置索引，`indexOf`从数组开头位置0出开始先后查找，`lastIndexOf`相反。
+- **every、some、filter、forEach、map**：数组迭代方法,
+    - `every`循环每一项，都为满足条件才返回`true`
+    ```js
+    var numbers = [1,2,3,4,5,6,7,8,9];
+    var result = numbers.every(function(item,index,array){
+        return item > 0;
+    })
+    console.log(result); //true;
+    ```
+    - `some`有一项为真，就返回`true`，和`every`功能相反，使用方法类似。
+    - `filter`数组筛选。
+    ```js
+    var numbers = [1,2,3,4,5,6,7,8,9];
+    var result = numbers.filter(function(item,index,array){
+        return item > 5;
+    })
+    console.log(result); //[6,7,8,9];
+    ```
+    - `map`数组循环，和`forEach`功能类似。返回一个数组
+    - `forEach`数组循环，和`for`循环类似。
+- **reduce和reduceRight**: 并归方法，这两个方法都会迭代数组的所有项，然后构建一个最终返回值。方法有4个参数：前面项的操作集合、当前值、索引、数组对象
+```js
+var arr = [1,2,3,4,5,6,7,8,9];
+var result = arr.reduce(function(prev,current,index,array){
+    console.log(prev,current)
+    return prev + current;
+})
+console.log(result); //45
 ```
 
 **2、数组检测`instanceof`和`isArray()`**
@@ -35,8 +78,21 @@ var arr = [];
 arr instanceof Array;  //true
 Array.isArray(arr); //true
 ```
+**3、数组从左到右。从右到左循环**
+```js
+var arr = [1,2,3,4,5,6,7,8,9];
+//从左到右
+for(let i = 0; i < arr.length; i++){
+    console.log(arr[i]);  //1,2,3,4,5,6,7,8,9
+}
+//从右到左
+for(let i = arr.length: i >=0; i--){
+    console.log(arr[i]);  //9,8,7,6,5,4,3,2,1
+}
 
-**1、查找数组中最大的值**
+```
+
+**4、查找数组中最大的值**
 
 我觉得各种排序在这里适用。
 ``` js
@@ -89,7 +145,7 @@ function max(a, b) {
 console.log(arr.reduce(max));
 ```
 
-**2、数组和字符串相互转换**
+**4、数组和字符串相互转换**
 ```js
 //数组转字符串
 var arr =[1,2,3,4,5,6,7];
