@@ -78,26 +78,30 @@ var arr = [];
 arr instanceof Array;  //true
 Array.isArray(arr); //true
 ```
-**3、数组从左到右。从右到左循环**
+**3、数组从左到右、从右到左循环**
+- 从左到右循环
 ```js
 var arr = [1,2,3,4,5,6,7,8,9];
-//从左到右
 for(let i = 0; i < arr.length; i++){
     console.log(arr[i]);  //1,2,3,4,5,6,7,8,9
 }
-//从右到左
+```
+
+- 从右到左循环
+```js
+var arr = [1,2,3,4,5,6,7,8,9];
 for(let i = arr.length: i >=0; i--){
     console.log(arr[i]);  //9,8,7,6,5,4,3,2,1
 }
-
 ```
 
 **4、查找数组中最大的值**
 
 我觉得各种排序在这里适用。
+
+- 第一种：排序
 ``` js
 var arr = [6, 4, 1, 8, 2, 11, 3];
-//第一种：排序
 function searchMax1(arr) {
     var arr2 = arr.concat(); //拷贝一份，不改变原来的数组结构
     var arr1 = arr2.sort(function (a, b) {
@@ -107,7 +111,10 @@ function searchMax1(arr) {
 }
 console.log(searchMax1(arr));
 
-//假设最大的一个就是arr[0]
+```
+
+- 第二种：假设最大的一个就是arr[0]
+``` js
 function searchMax2(arr) {
     var arr1 = arr.concat(); //拷贝一份
     var result = [];
@@ -120,8 +127,10 @@ function searchMax2(arr) {
     return max;
 }
 console.log(searchMax2(arr));
+```
 
-//冒泡排序
+- 第三种：冒泡排序
+```js
 function searchMax3(arr) {
     var arr1 = arr.slice(0);
     var result = [];
@@ -137,28 +146,116 @@ function searchMax3(arr) {
     return arr1[0];
 }
 console.log(searchMax3(arr));
+```
 
-//reduce
+- 第四种：自带的reduce方法
+```js
 function max(a, b) {
     return Math.max(a, b);
 }
 console.log(arr.reduce(max));
 ```
 
-**4、数组和字符串相互转换**
+**5、数组和字符串相互转换**
+
+- 数组转字符串
 ```js
-//数组转字符串
 var arr =[1,2,3,4,5,6,7];
 arr.toString(); //1,2,3,4,5,6,7
 //是通过指定的分隔符进行分隔的。
 arr.join(','); //1,2,3,4,5,6,7
-
-
-字符串转数组;
+```
+- 字符串转数组
+``` js
 var str = 1234567;
 str.split(''); //[1,2,3,4,5,6,7]
 
 var str = 1,2,3,4,5,6,7;
 str.split(','); //[1,2,3,4,5,6,7]
 ```
+**6、数组深拷贝**
+- 第一种方法：for循环
+```js
+function deepCopy(arr){
+    var result = [];
+    for(let i in arr){
+        resule[i] = arr[i];
+    }
+    return result;
+}
+var arrCopy1 = deepCopy(arr);
+```
 
+- 第二种方法：JSON转换,把数组转换成string，再转换成数组。
+```js
+var arrCopy2 = JSON.parse(JSON.stringity(arr));
+```
+数组的浅拷贝可以使用`concat`、`slice`等自带的方法。
+
+**7、数组去重**
+
+- 第一种：相邻元素对比
+```js
+var arr = [1,2,3,2,3,4,4,6,7,5,5,5,6];
+function unique1(arr){
+    var arr1 = arr.sort();  //数组排序,改成有序
+    var result = [];
+    for(let i = 0; i<arr1.length; i++){
+        if(arr1[i] != arr1[i+1]){
+            result.push(arr1[i]);
+        }
+    }
+    return result;
+}
+```
+- 第二种：indexOf
+```js
+function unique2(arr){
+    var result = [];
+    for(let i = 0; i < arr.length: i++){
+        if(result.indexOf(arr[i]) == -1){
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+```
+
+- 第三种：数组转对象。根据对象的键值唯一的特性。
+```js
+function unique3(arr){
+    var result = [];
+    var obj = {};
+    for(let i = 0; i < arr.length; i++){
+        //如果不存在相应的对象键值，表示当前值唯一。
+        if(!obj[arr[i]]){
+            obj[arr[i]] = 1;
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+```
+
+- 第四种：双循环
+```js
+function unique4(arr){
+    var flag = false,
+        result = [];
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < result.length; j++){
+            //在result数组找到相同的项，则为false
+            if(arr[i] == result[j]){
+                flag = false;
+            }else{
+                flag = true;
+            }
+        }
+        if(flag){
+            result.push(arr[i]);
+        }
+    }
+}
+```
+
+文章中有考虑不全的地方，欢迎各位指正。
