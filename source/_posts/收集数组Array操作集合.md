@@ -156,6 +156,11 @@ function max(a, b) {
 console.log(arr.reduce(max));
 ```
 
+- 第五种：apply和Math结合(**更新于：2018/7/25**)
+```js
+var max = Math.max.apply(Math, arr);
+```
+
 **5、数组和字符串相互转换**
 
 - 数组转字符串
@@ -224,8 +229,7 @@ function unique2(arr){
 - 第三种：数组转对象。根据对象的键值唯一的特性。
 ```js
 function unique3(arr){
-    var result = [];
-    var obj = {};
+    var result = [],obj = {};
     for(let i = 0; i < arr.length; i++){
         //如果不存在相应的对象键值，表示当前值唯一。
         if(!obj[arr[i]]){
@@ -240,8 +244,7 @@ function unique3(arr){
 - 第四种：双循环
 ```js
 function unique4(arr){
-    var flag = false,
-        result = [];
+    var flag = false,result = [];
     for(let i = 0; i < arr.length; i++){
         for(let j = 0; j < result.length; j++){
             //在result数组找到相同的项，则为false
