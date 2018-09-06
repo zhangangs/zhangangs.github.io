@@ -6,3 +6,4 @@ node_modules/
 public/
 .deploy*/
 mybat2.bat
+package-lock.json
