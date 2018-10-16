@@ -512,7 +512,7 @@ blockquote p {
 ::-webkit-scrollbar-thumb {
     /*滚动条里面小方块*/
     border-radius: 10px;
-    background: #4e4e4b;
+    background: #bbb;
 }
 
 :-webkit-scrollbar-track {
