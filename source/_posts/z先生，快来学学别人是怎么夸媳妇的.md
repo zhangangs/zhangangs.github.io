@@ -1,12 +1,11 @@
 ---
-title: 快来get别人是怎么夸媳妇
+title: z先生，快来学学别人是怎么夸媳妇的
 tags: 媳妇
 author: zhangangs
 date: 2018-6-23
 ---
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=201177&auto=1&height=66"></iframe>
-
 
 ** 歌词如下 **
 
