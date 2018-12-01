@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>关于解决前端首页加载慢的问题-飞鱼</title><link rel="stylesheet" href="/css/normalize.css"><link rel="stylesheet" href="/css/hexo-theme-adoubi.css"><link rel="icon" href="/images/favicon.ico"></head><body><div class="content"><div class="author-info"><a href="/archives/" title="返回列表页"><img src="/images/icon_face.jpg"></a></div><h4 class="post-title-wrapper"><p class="post-title">关于解决前端首页加载慢的问题</p></h4><div class="post-date"><p>Author:<a href="/about">飞鱼</a></p><p>Date:<time datetime="2018-06-18T16:00:00.000Z">2018-06-19</time></p></div><div class="post-content"><p>目前网站的全部js和css通过gulp打包成一个大文件，angularjs又不支持异步加载模块代码。</p>
+<p>就出现了这么一种情况，就是打开首页的时候要把全部的js和css资源请求到，首页加载的非常的慢，半天都显示不出来。这个问题对网站来说就非常的致命了。</p>
+<p>以前我做个代码的压缩，但是治标不治本，以后模块越多，打包的文件越来越大，所以我抽空就写了这么个解决方案(按需加载)。</p>
+<p><strong> 需要解决什么问题？ </strong></p>
+<p>答：解决网站首页加载慢的问题。</p>
+<p><strong> 是什么原因导致首页加载慢？ </strong></p>
+<p>答：全站的资源都打包在一起，加载首页的时候，全站的资源都加载了，所以导致首页加载慢。</p>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>大小</th>
+<th>加载时间</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vendor.css</td>
+<td>845kb</td>
+<td>157ms</td>
+<td>插件css</td>
+</tr>
+<tr>
+<td>vendor.js</td>
+<td>5.3mb</td>
+<td>1.14s</td>
+<td>插件js</td>
+</tr>
+<tr>
+<td>main.css</td>
+<td>662kb</td>
+<td>217ms</td>
+<td>业务css</td>
+</tr>
+<tr>
+<td>app.js</td>
+<td>5.4mb</td>
+<td>1.24s</td>
+<td>业务js</td>
+</tr>
+</tbody>
+</table>
+<p>以上的代码，做过一定的压缩。（并未完全压缩，因为代码不规范，压缩不了）</p>
+<p>如果还是以这种方式加载资源，打包的代码会越来越庞大。现在大概需要4到5s的加载时间，以后<code>10s</code>才加载出来都是有可能的。</p>
+<p><strong> 如何解决这个问题？ </strong></p>
+<p>答：网站资源和第三方插件js和css文件不要打包成一个文件，按需加载（哪里需要就在哪里加载） 即可解决这个问题。</p>
+<p><strong> 那么，具体该如何操作呢？ </strong></p>
+<p>准备工作：安装<code>$oclazyload</code> 插件， </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bower install oclazyload --save</span><br></pre></td></tr></table></figure>
+<p><strong> 为什么要使用这个插件？ </strong></p>
+<p>答：这是angularjs资源按需加载插件，专门解决按需加载文件需求。</p>
+<p>文档手册：<a href="https://oclazyload.readme.io/" target="_blank" rel="noopener">https://oclazyload.readme.io/</a></p>
+<p><strong> 使用方法：</strong></p>
+<p>1、添加<code>$oclazyload</code>模块到项目中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myApp = angular.module(<span class="string">"MyApp"</span>, [<span class="string">"oc.lazyLoad"</span>]);</span><br></pre></td></tr></table></figure></p>
+<p>2、在app.module.js中配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.config([<span class="string">'$ocLazyLoadProvider'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$ocLazyLoadProvider</span>) </span>&#123;</span><br><span class="line">    $ocLazyLoadProvider.config(&#123;</span><br><span class="line">      debug: <span class="literal">true</span>, <span class="comment">//调试模式</span></span><br><span class="line">      events: <span class="literal">true</span>，<span class="comment">//广播事件</span></span><br><span class="line">     &#125;);</span><br><span class="line"> &#125;])</span><br></pre></td></tr></table></figure>
+<p>3、在router中使用，我以naturePlus模块举例。naturePlus.status.js配置如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//新建</span></span><br><span class="line">.state(<span class="string">'naturePlusAdd'</span>, &#123;</span><br><span class="line">  url: <span class="string">'/naturePlus/add'</span>,</span><br><span class="line">  templateUrl: <span class="string">'app/naturePlus/add/index.html'</span>,</span><br><span class="line">  <span class="comment">/*</span></span><br><span class="line"><span class="comment">   * 下面是路由的依赖资源，</span></span><br><span class="line"><span class="comment">   * 可以看出来：页面依赖第三方插件bootstrap-tagsinput和一些公共的代码</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  resolve: &#123;</span><br><span class="line">    deps: [<span class="string">'$ocLazyLoad'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$ocLazyLoad</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> $ocLazyLoad.load([</span><br><span class="line">        <span class="comment">//模块代码</span></span><br><span class="line">        <span class="string">'app/naturePlus/naturePlus.service.js'</span>,</span><br><span class="line">        <span class="string">'app/naturePlus/naturePlus.factory.js'</span>,</span><br><span class="line">        <span class="string">'app/naturePlus/naturePlus.directive.js'</span>,</span><br><span class="line">        <span class="string">'app/naturePlus/naturePlus.filter.js'</span>,</span><br><span class="line">        <span class="string">'app/naturePlus/add/add.controller.js'</span>,</span><br><span class="line">        <span class="comment">//插件代码</span></span><br><span class="line">        <span class="string">'bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css'</span>,</span><br><span class="line">        <span class="string">'bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js'</span></span><br><span class="line">      ]);</span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">.state(<span class="string">'...'</span>)</span><br></pre></td></tr></table></figure>
+<p>以上就完成了代码的改造，这样访问页面才会加载这个页面需要的资源，尽情的撸代码吧!</p>
+<p>桥豆麻袋，桥豆麻袋。。。</p>
+<p>开发的时候这样改造，但是打包的时候还是打包成一个文件，这不是没改吗？</p>
+<p>是的，我们下一步，就是对gulp打包流程的改造。</p>
+<p><strong> 那么，gulp打包流程该如何改造呢？ </strong></p>
+<p>1、第三方插件</p>
+<p>查找项目下引用的是bower_components中的js和css文件。即：路由<code>ocLazyLoad.load()</code>按需加载的 <code>bower_components</code> 插件，拷贝到dist目录下<code>bower_component</code>文件夹下面。</p>
+<p>2、关于预编译文件</p>
+<p>如果是scss编译成css，其他模版文件编译成浏览器可识别的文件，压缩后，放到dist相应的文件夹下面即可。</p>
+<p>3、imgae、js和html</p>
+<p>文件压缩，拷贝文件到dist相应的目录即可。</p>
+<p>到此，开发和打包改造完成！</p>
+<p><strong> 总结：</strong>虽然按需加载会损耗一部分性能（打开新页面再去请求资源），但是能解决目前首页加载慢的问题和打包越来越大的问题。</p>
+<p>这种方式改动极小，只需要改造页面的路由手动添加依赖，能解决问题相应的问题。</p>
+</div></div><div class="footer"><div class="footer-copyright">Theme By <a href="https://github.com/shinux/hexo-theme-adoubi" target="_blank">Adoubi</a> , Modify By <a href="https://github.com/zhangangs" target="_blank">Veiss</a>, Powered By Hexo.</div></div></body></html>

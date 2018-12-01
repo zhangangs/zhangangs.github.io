@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>关于相同标签最多能嵌套多少层测试-飞鱼</title><link rel="stylesheet" href="/css/normalize.css"><link rel="stylesheet" href="/css/hexo-theme-adoubi.css"><link rel="icon" href="/images/favicon.ico"></head><body><div class="content"><div class="author-info"><a href="/archives/" title="返回列表页"><img src="/images/icon_face.jpg"></a></div><h4 class="post-title-wrapper"><p class="post-title">关于相同标签最多能嵌套多少层测试</p></h4><div class="post-date"><p>Author:<a href="/about">飞鱼</a></p><p>Date:<time datetime="2017-05-14T16:00:00.000Z">2017-05-15</time></p></div><div class="post-content"><p>今天在看有浏览器内部工作原理这篇文章的时候突发奇想，标签到底可以嵌套多少层？</p>
+<p>大概像这样： <code>&lt;div&gt; &lt;div&gt; &lt;div&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></p>
+<p><strong> 我写了段js代码做测试：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> sum = <span class="number">100</span>; <span class="comment">//嵌套的层数</span></span><br><span class="line">  <span class="keyword">var</span> str = <span class="string">""</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;sum; i++)&#123;</span><br><span class="line">    str += <span class="string">"&lt;div&gt;"</span> + i;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j&lt;sum; j++)&#123;</span><br><span class="line">    str += <span class="string">"&lt;/div&gt;"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(str);</span><br><span class="line">  $(<span class="string">"body"</span>).append(str);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong> 首先嵌套100层 </strong></p>
+<p>IE：在嵌套到60层的时候，在开发者工具里面后面的嵌套展示不出来，但是右键编辑HTML还是可以编辑。</p>
+<p>firefox：在嵌套到94层的时候，和ie的情况一样。</p>
+<p>chrome：正常显示</p>
+<p><strong> 嵌套500层 </strong></p>
+<p>IE：能正常显示</p>
+<p>firefox：最多嵌套200层，后面的标签不能显示，只显示文本</p>
+<p>chrome：正常显示</p>
+<p><strong> 嵌套1000层 </strong></p>
+<p>IE: ie崩溃了，经过测试，嵌套到788层不会崩溃，多一层就会崩溃。</p>
+<p>firefox：同上</p>
+<p>chrome：正常显示</p>
+<p>最后，chrome我测试了200000层都能正常工作。</p>
+<p><strong> 总结： </strong></p>
+<p>IE：最多嵌套788层，多一层都会崩溃(可能跟我的电脑配置有关)。</p>
+<p>firefox：最多只能嵌套200层，后面的嵌套只显示文本。</p>
+<p>chrome：我嵌套了200000层，还能正常显示，后面我就没有测试了。</p>
+<p>这篇文章，纯属博主娱乐，不专业也不权威！</p>
+</div></div><div class="footer"><div class="footer-copyright">Theme By <a href="https://github.com/shinux/hexo-theme-adoubi" target="_blank">Adoubi</a> , Modify By <a href="https://github.com/zhangangs" target="_blank">Veiss</a>, Powered By Hexo.</div></div></body></html>

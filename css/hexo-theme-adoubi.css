@@ -1,0 +1,376 @@
+pre,
+.highlight {
+  overflow: auto;
+  margin: 1.2em 0;
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: #4d4d4c;
+  background: #f9f9f9;
+  line-height: 1.42857143;
+}
+pre,
+code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+code {
+  color: #dc3c64;
+  border-radius: 1px;
+  background-color: #fdf6f8;
+  font-size: 90%;
+  padding: 0 0.4rem;
+}
+pre code {
+  padding: 0;
+  color: #4d4d4c;
+  background: none;
+  text-shadow: none;
+}
+.highlight pre {
+  border: none;
+  margin: 0;
+  padding: 1px;
+}
+.highlight table {
+  margin: 0;
+  width: auto;
+  border: none;
+}
+.highlight td {
+  border: none;
+  padding: 0;
+}
+.highlight figcaption {
+  font-size: 1em;
+  color: #4d4d4c;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+.highlight figcaption a {
+  float: right;
+  color: #4d4d4c;
+}
+.highlight figcaption a:hover {
+  border-bottom-color: #4d4d4c;
+}
+.highlight .gutter pre {
+  text-align: right;
+  padding-right: 1rem;
+}
+.highlight .line {
+  height: 2rem;
+}
+.highlight.html .name {
+  color: #8959a8;
+}
+.highlight.css .selector-class {
+  color: #f5871f;
+}
+.gutter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+}
+.gist table {
+  width: auto;
+}
+.gist table td {
+  border: none;
+}
+pre .deletion {
+  background: #fdd;
+}
+pre .addition {
+  background: #dfd;
+}
+pre .meta {
+  color: #8959a8;
+}
+pre .comment {
+  color: #8e908c;
+}
+pre .variable,
+pre .attribute,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #8959a8;
+}
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant,
+pre .command,
+pre .builtin-name,
+pre .attr {
+  color: #f5871f;
+}
+pre .ruby .class .title,
+pre .css .rules .attribute,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata,
+pre .special,
+pre .number,
+pre .formula {
+  color: #718c00;
+}
+pre .title,
+pre .css .hexcolor {
+  color: #3e999f;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #4271ae;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #8959a8;
+}
+pre .string {
+  color: #718c00;
+}
+body {
+/*font-family Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace*/
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  height: 100vh;
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 3rem 0;
+  font-weight: 300;
+}
+a {
+  color: #2b3dc3;
+}
+.content {
+  flex: 1;
+  font-size: 1.4rem;
+  line-height: 1.7375;
+  letter-spacing: 0.018em;
+/*font-weight 300*/
+  margin: 0 auto;
+  width: 40%;
+}
+.content img {
+  max-width: 100%;
+}
+.header {
+  margin-top: 20vh;
+  text-align: center;
+}
+.header h3 {
+  margin: 2rem 0;
+  font-size: 3.4rem;
+}
+.header > a {
+  margin: 1rem 1rem 0;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.header__title img {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+}
+.header__title h3 {
+  letter-spacing: 0.1em;
+}
+.footer {
+  text-align: center;
+  color: #999;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  width: 100%;
+  height: 5%;
+  left: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.footer a {
+  color: #555;
+}
+.post {
+  width: 55%;
+}
+.post .author-info img {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.post-title-wrapper {
+  margin-top: 0;
+  margin-bottom: 1%;
+}
+.post-title {
+  margin: 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 2.8rem;
+}
+.post-date {
+  margin-bottom: 2rem;
+  padding-bottom: 0.8rem;
+  color: #999;
+  border-bottom: 1px dashed #ddd;
+  font-size: 1.3rem;
+}
+.post-date p {
+  margin: 0 0.8rem 0 0;
+  display: inline-block;
+}
+.post-date p a {
+  text-decoration: none;
+}
+.post-date p a:hover {
+  color: #e71;
+}
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
+.post-content a {
+  text-decoration: none;
+}
+.post-content a:hover {
+  color: #e71;
+}
+.post-content > table {
+  table-layout: fixed;
+  padding: 0;
+  text-align: left;
+  border-spacing: 0;
+  width: 85%;
+  border-left: 1px solid #eee;
+}
+.post-content > table thead tr th {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-top: 1px solid #eee;
+}
+.post-content > table tbody tr td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+.author-info {
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+.author-info a {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.author-info img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.author-info .info {
+  display: inline-block;
+  margin-left: 1.5rem;
+  vertical-align: middle;
+}
+.author-info .info .name {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
+}
+.author-info .info .slogan {
+  margin-top: 0.04rem;
+  color: #777;
+}
+.post .author-info a:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 30px;
+  top: -30px;
+  left: 50%;
+  background: #eee;
+}
+.archive-item {
+  border-bottom: 1px dashed #ddd;
+}
+.archive-item div {
+  padding: 1.6% 1%;
+  transition: all 0.3s linear;
+}
+.archive-item__link {
+  color: #000;
+  text-decoration: none;
+}
+.archive-item__link__time {
+  letter-spacing: -0.02em;
+  display: inline-block;
+  float: right;
+  color: #999;
+  font-size: 0.13rem;
+}
+.archive-item__link__title:hover {
+  color: #2b3dc3;
+  text-decoration: none;
+}
+.page-navigator {
+  margin-top: 3%;
+}
+.page-number,
+.prev {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 1024px) {
+  .post,
+  .content {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post,
+  .content {
+    width: 96%;
+  }
+  .archive-item__link__time {
+    display: none;
+  }
+  .archive-item__link__title {
+    margin-left: 0;
+  }
+  .header > a {
+    margin-right: 5px;
+  }
+}
