@@ -1,5 +1,5 @@
 ---
-title: z先生，快来学学别人是怎么夸媳妇的
+title: Z,快来学学别人是怎么夸媳妇的
 tags: 媳妇
 author: zhangangs
 date: 2018-6-23
