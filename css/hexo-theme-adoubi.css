@@ -189,6 +189,7 @@ a {
   font-size: 3.4rem;
 }
 .header > a {
+  position: relative;
   margin: 1rem 1rem 0;
   display: inline-block;
   font-family: sans-serif;
@@ -202,6 +203,27 @@ a {
 }
 .header__title h3 {
   letter-spacing: 0.1em;
+}
+.content .post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .post-header .jump {
+  display: flex;
+  align-items: center;
+  color: #777;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+.content .post-header .jump >img {
+  margin-right: 0.3rem;
+  width: 1.3rem;
+  transition: all 0.3s linear;
+}
+.content .post-header .jump:hover >img {
+  margin-right: 1rem;
 }
 .footer {
   text-align: center;
