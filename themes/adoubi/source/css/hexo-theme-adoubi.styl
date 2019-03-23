@@ -24,6 +24,8 @@ a
   /*font-weight 300*/
   margin 0 auto
   width 40%
+  animation myMove 1s
+  animation-fill-mode forwards
   img
     max-width 100%
 
@@ -176,7 +178,7 @@ a
   border-bottom 1px dashed #ddd
   div
     padding 1.6% 1%
-    transition all .3s linear;
+    // transition all 1s linear
   &__link
     color #000
     text-decoration none
@@ -209,3 +211,9 @@ a
     margin-left 0
   .header > a
     margin-right 5px
+
+@keyframes myMove
+  from
+    opacity 0
+  to
+    opacity 1
