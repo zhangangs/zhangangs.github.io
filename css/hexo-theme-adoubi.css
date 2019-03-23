@@ -176,6 +176,8 @@ a {
 /*font-weight 300*/
   margin: 0 auto;
   width: 40%;
+  animation: myMove 1s;
+  animation-fill-mode: forwards;
 }
 .content img {
   max-width: 100%;
@@ -350,7 +352,6 @@ a {
 }
 .archive-item div {
   padding: 1.6% 1%;
-  transition: all 0.3s linear;
 }
 .archive-item__link {
   color: #000;
@@ -394,5 +395,37 @@ a {
   }
   .header > a {
     margin-right: 5px;
+  }
+}
+@-moz-keyframes myMove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes myMove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes myMove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes myMove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
