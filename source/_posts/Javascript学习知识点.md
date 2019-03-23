@@ -2,7 +2,7 @@
 title: Javascript学习知识点-持续更新
 tags: javascript
 author: zhangangs
-date: 2018-7-15
+date: 2019-3-24
 ---
 
 整理一下学习和工作中遇到的javascript中需要注意的地方。不用就是忘得快啊，写在这里方便自己以后复习吧，本文将持续更新。（**首次更新于：2017-8-7**）
@@ -152,6 +152,25 @@ arr.splice(0,1,['black','yellow']); //[["black", "yellow"] "green", "blue"]
 arr.splice(0,1,'black'); //["black", "green", "blue"]
 ```
 
-** 文章中有考虑不全的地方，欢迎各位指正。 **
+**11、一维数组转树状结构** (<small>更新于：2019/3/24</small>)
+```js
+function filterArray(data, parent){
+  const tree = [];
+  let temp;
+  for (let i = 0; i < data.length; i++) {
+      if (data[i].parentId === parent) {
+        const obj = data[i];
+        temp = this.filterArray(data, data[i].userId);
+        if (temp.length > 0) {
+          obj.children = temp;
+        }
+        tree.push(obj);
+      }
+  }
+  return tree;
+}
+```
+
+文章中有考虑不全的地方，欢迎指正。
 
 
