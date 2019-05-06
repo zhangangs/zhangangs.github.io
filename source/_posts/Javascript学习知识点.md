@@ -2,7 +2,7 @@
 title: Javascript学习知识点-持续更新
 tags: javascript
 author: zhangangs
-date: 2019-3-24
+date: 2019-5-5
 ---
 
 整理一下学习和工作中遇到的javascript中需要注意的地方。不用就是忘得快啊，写在这里方便自己以后复习吧，本文将持续更新。（**首次更新于：2017-8-7**）
@@ -169,6 +169,67 @@ function filterArray(data, parent){
   }
   return tree;
 }
+```
+
+**12、如何检测Object和Array** (<small>更新于：2019/5/5</small>)
+
+使用`typeof`检测数组和对象返回的都是`object`。
+- 使用`instanceof`，检测是否属于某个原型
+```js
+console.log(arr instanceof Array) // true
+console.log(obj instanceof Object) // true
+```
+- 使用`constructor`,检测底层构造函数
+```js
+console.log(arr.constructor === Array) // true
+console.log(obj.constructor === Object) // true
+```
+- 使用`isArray`方法，检测是否是数组
+```js
+console.log(Array.isArray(arr))) // true
+console.log(Array.isArray(obj)) // false
+```
+
+**13、两个变量互换,常见的几种方式** (<small>更新于：2019/5/6</small>)
+
+js常见的两个变量互换，例如：`var x =1, y =2`
+
+- 1、添加一个缓存变量`z`
+``` js
+var z = y;
+y = x,
+x = z;
+console.log(x,y); // 2 1
+```
+
+- 2、不使用三方变量
+```js
+x = x + y;
+y = x - y;
+x = x - y;
+console.log(x, y);
+```
+
+- 3、es6 解构赋值
+```js
+[x, y] = [y, x];
+console.log(x, y);
+```
+
+- 4、借用`object`交换数据
+```js
+x = {x,y};  // es6简写,与x = {x:x, y:y}效果相同
+y = x.x;
+x = x.y;	// x最后赋值
+console.log(x, y);
+```
+
+- 5、借用`Array`交换数据
+```js
+x = [x, y];
+y = x[0];
+x = x[1];
+console.log(x, y);
 ```
 
 文章中有考虑不全的地方，欢迎指正。
