@@ -17,6 +17,7 @@ html {
     -webkit-text-size-adjust: 100%;
     /* 2 */
     font-size: 62.5%;
+    font-family: -apple-system, Verdana, "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 /* Sections
@@ -504,9 +505,9 @@ blockquote p {
 
 ::-webkit-scrollbar {
     /*滚动条整体样式*/
-    width: 6px;
+    width: 8px;
     /*高宽分别对应横竖滚动条的尺寸*/
-    height: 6px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {

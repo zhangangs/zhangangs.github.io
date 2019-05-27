@@ -5,7 +5,7 @@ pre,
   padding: 1rem;
   font-size: 1.35rem;
   color: #4d4d4c;
-  background: #f9f9f9;
+  background: #f9f8fc;
   line-height: 1.42857143;
 }
 pre,
@@ -175,7 +175,7 @@ a {
   letter-spacing: 0.018em;
 /*font-weight 300*/
   margin: 0 auto;
-  width: 40%;
+  width: 42%;
   animation: myMove 1s;
   animation-fill-mode: forwards;
 }
@@ -309,6 +309,9 @@ a {
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #eee;
   border-right: 1px solid #eee;
+}
+.post-content ul {
+  list-style: bengali;
 }
 .author-info {
   margin-top: 4%;
