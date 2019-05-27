@@ -4,13 +4,14 @@
 
 # Site
 title: 飞鱼
+#moral: 待到秋来九月八，我花开后百花杀，<br/>冲天香阵透长安，满城尽带黄金甲。
 #subtitle: 常羡人间琢玉郎，天应乞与点酥娘
-#description: 待到秋来九月八，我花开后百花杀，<br/>冲天香阵透长安，满城尽带黄金甲。
+moral: 天下英雄出我辈，一入江湖岁月催。<br/>宏图霸业谈笑间，不胜人生一场醉。
 subtitle: 竹杖芒鞋轻胜马，一蓑烟雨任平生
-description: 天下英雄出我辈，一入江湖岁月催。<br/>宏图霸业谈笑间，不胜人生一场醉。
 author: zhangangs
-language: zh-Hans
-timezone:
+language: zh
+keywords: 飞鱼,前端,技术博客,心情日记
+description: 随手记录工作生活中的点点滴滴,让普通的生活中多一点小小的惊喜...
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
