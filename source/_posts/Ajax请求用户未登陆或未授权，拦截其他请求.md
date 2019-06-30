@@ -35,7 +35,3 @@ $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
 如果没检测到Cookie，请求的链接不是`/monitorfixed/login`, 终止请求。
 
 登录成功后，写入cookie，再次刷新页面 `window.location.reload()`，请求其他资源，完成！
-
-
-
-
