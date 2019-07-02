@@ -26,13 +26,13 @@ ENOTFOUND (DNS lookup failed): Indicates a DNS failure of either EAI_NODATA or E
 
 **1，根据网址查看ip地址 **
 ```
-nslookup exp.com    //自己的网站地址
+nslookup example.com    //自己的网站地址
 
 返回：
 Server:		10.111.2.253
 Address:	10.111.2.253#53
 
-Name:	exp.com
+Name:	example.com
 Address: 10.111.2.120
 ```
 
@@ -41,7 +41,7 @@ Mac系统如何编辑hosts文件
 https://jingyan.baidu.com/article/f3ad7d0f55154309c3345bdd.html
 ```
 // 加一条解析规则到hosts中
-10.111.2.120    exp.com
+10.111.2.120    example.com
 ```
 
 刷新页面，完美解决问题！
