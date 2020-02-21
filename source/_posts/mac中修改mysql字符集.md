@@ -1,5 +1,5 @@
 ---
-title: Mac中修改mysql字符集
+title: mac中修改mysql字符集
 tags: mysql
 author: zhangangs
 date: 2019-12-6
