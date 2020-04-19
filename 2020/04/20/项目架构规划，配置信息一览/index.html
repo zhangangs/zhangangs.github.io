@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="apple-mobile-web-app-title" content="飞鱼"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f0f0f0"><meta name="theme-color" content="#ffffff"><link rel="manifest" href="/manifest.json"><meta name="keywords" content="飞鱼,前端,技术博客,心情日记"><meta name="description" content="随手记录工作生活中的点点滴滴,让普通的生活中多一点小小的惊喜..."><title>第一部分：项目架构规划，配置信息一览-飞鱼</title><link rel="apple-touch-icon" href="/images/android-chrome-192x192.png"><link rel="stylesheet" href="/css/normalize.css"><link rel="stylesheet" href="/css/hexo-theme-adoubi.css"><link rel="icon" href="/images/favicon.ico"></head><body><div class="content"><div class="author-info post-header"><a href="/archives/" title="返回列表页"><img src="/images/icon_face.jpg"></a><a class="jump" href="/archives/" title="返回列表页"> <img src="/images/icon-back.svg"><span>返回</span></a></div><h4 class="post-title-wrapper"><p class="post-title">第一部分：项目架构规划，配置信息一览</p></h4><div class="post-date"><p>Author:<a href="/about">飞鱼</a></p><p>Date:<time datetime="2020-04-19T17:18:00.000Z">2020-04-20</time></p></div><div class="post-content"><p>前言：最近拿到一台linux服务器，需要搭建docker + nginx + tomcat + gitlib + jenkins + mssql环境，在博客做个记录，方便自己随时查找方便，同时希望对其他同学有些帮助。</p>
+<p><strong>服务器选择centos8.0 64位 ，基于容器docker(Docker version 19.03.8, build afacb8b)</strong></p>
+<p>前端：nginx 1.17.9<br>后端：tomcat  8.5.53<br>代码储存：gitlab<br>自动发布：jenkins</p>
+<p><strong>共有三个环境，分为8个容器（6个开发容器 + 2个辅助容器）</strong><br>本地开发环境    本地下载安装mssql</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>frontend</th>
+<th>backend</th>
+<th>mssql</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>测试环境</td>
+<td>project-frontend-nginx1.85-dev</td>
+<td>project-backend-tomcat1.85-dev</td>
+<td>project-mssql2017-dev</td>
+</tr>
+<tr>
+<td>生产环境</td>
+<td>project-frontend-nginx1.85-prod</td>
+<td>project-backend-tomcat1.85-prod</td>
+<td>project-mssql2017-prod</td>
+</tr>
+<tr>
+<td>gitlab</td>
+<td>project-gitlab1.2.3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>jenkins</td>
+<td>project-jenkens1.2.3</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>容器命名规则 =&gt; <strong>项目名称+项目类型+启动服务器(+版本号) + 开发环境</strong></p>
+<p><strong>端口管理（开放自定义端口，需要到阿里云配置，不然不能访问）</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>frontend</th>
+<th>backend</th>
+<th>mssql</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>测试环境</td>
+<td>9099</td>
+<td>8088</td>
+<td>14330</td>
+</tr>
+<tr>
+<td>生产环境</td>
+<td>9090</td>
+<td>8080</td>
+<td>1433</td>
+</tr>
+<tr>
+<td>gitlab</td>
+<td>2280</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>jenkins</td>
+<td>8089</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2020-4-8更新</strong><br>由于配置不高，jenkins构建的时候资源不够，导致构建失败，所以调整mssql容器，太占资源了。</p>
+<p>调整如下：project-mssql2017-dev  和 project-mssql2017-prod 合并成  project-mssql2017<br>在project-mssql2017中建两个数据库，分别代表测试库（<code>projectdb</code>）和生产库（<code>project</code>）。</p>
+<p>端口统一成：1433, 关闭14330端口</p>
+<p><strong>结语：</strong><br>为啥没有一个容器，放dev和prod两个项目，在当初的设想中，两个项目交错在一起，感觉很麻烦，一个容器出错，导致全部项目都访问不了，所以就分开成两个容器部署。例如：dev坏了，prod还能用。</p>
+<p>我也不清楚这种模式对不对。自己摸索着弄。由于时间仓促，东西写的不是很详细，主要想表达出这种思想。</p>
+</div></div><div class="footer"><div class="footer-copyright">Theme By <a href="https://github.com/shinux/hexo-theme-adoubi" target="_blank">Adoubi</a> , Modify By <a href="https://github.com/zhangangs" target="_blank">Veiss</a>, Powered By Hexo.</div></div></body></html>
