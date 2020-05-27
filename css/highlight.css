@@ -4,8 +4,8 @@ pre,
   margin: 1.2em 0;
   padding: 1rem;
   font-size: 1.35rem;
-  color: #4d4d4c;
-  background: #f9f8fc;
+  color: #656c73;
+  background: #f2f4f5;
   line-height: 1.42857143;
 }
 pre,
@@ -21,7 +21,7 @@ code {
 }
 pre code {
   padding: 0;
-  color: #4d4d4c;
+  color: #656c73;
   background: none;
   text-shadow: none;
 }
@@ -41,16 +41,16 @@ pre code {
 }
 .highlight figcaption {
   font-size: 1em;
-  color: #4d4d4c;
+  color: #656c73;
   line-height: 1em;
   margin-bottom: 1em;
 }
 .highlight figcaption a {
   float: right;
-  color: #4d4d4c;
+  color: #656c73;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #4d4d4c;
+  border-bottom-color: #656c73;
 }
 .highlight .gutter pre {
   text-align: right;

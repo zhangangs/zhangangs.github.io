@@ -4,8 +4,8 @@ pre,
   margin: 1.2em 0;
   padding: 1rem;
   font-size: 1.35rem;
-  color: #4d4d4c;
-  background: #f9f8fc;
+  color: #656c73;
+  background: #f2f4f5;
   line-height: 1.42857143;
 }
 pre,
@@ -21,7 +21,7 @@ code {
 }
 pre code {
   padding: 0;
-  color: #4d4d4c;
+  color: #656c73;
   background: none;
   text-shadow: none;
 }
@@ -41,16 +41,16 @@ pre code {
 }
 .highlight figcaption {
   font-size: 1em;
-  color: #4d4d4c;
+  color: #656c73;
   line-height: 1em;
   margin-bottom: 1em;
 }
 .highlight figcaption a {
   float: right;
-  color: #4d4d4c;
+  color: #656c73;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #4d4d4c;
+  border-bottom-color: #656c73;
 }
 .highlight .gutter pre {
   text-align: right;
@@ -155,6 +155,7 @@ body {
   min-height: 100vh;
   height: 100vh;
   font-weight: 300;
+  color: #314659;
 }
 h1,
 h2,
@@ -170,7 +171,7 @@ a {
 }
 .content {
   flex: 1;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 1.7375;
   letter-spacing: 0.018em;
 /*font-weight 300*/
@@ -195,7 +196,7 @@ a {
   margin: 1rem 1rem 0;
   display: inline-block;
   font-family: sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 .header__title img {
@@ -215,7 +216,7 @@ a {
   display: flex;
   align-items: center;
   color: #777;
-  font-size: 13px;
+  font-size: 1.5rem;
   text-decoration: none;
   transition: all 0.3s linear;
 }
@@ -255,7 +256,7 @@ a {
 }
 .post-title {
   margin: 0;
-  color: #333;
+  color: #314659;
   text-decoration: none;
   font-size: 2.8rem;
 }
@@ -339,7 +340,7 @@ a {
 }
 .author-info .info .slogan {
   margin-top: 0.04rem;
-  color: #777;
+  color: #98a3ac;
 }
 .post .author-info a:after {
   content: "";
@@ -357,7 +358,7 @@ a {
   padding: 1.6% 1%;
 }
 .archive-item__link {
-  color: #000;
+  color: #314659;
   text-decoration: none;
 }
 .archive-item__link__time {
