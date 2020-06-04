@@ -349,7 +349,7 @@ a {
   background: #eee;
 }
 .archive-item {
-  border-bottom: 1px dashed #ddd;
+  border-bottom: 1px solid #eef2f8;
 }
 .archive-item div {
   padding: 1.6% 1%;
