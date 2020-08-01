@@ -3,13 +3,13 @@
 <p><strong>启动docker</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure></p>
 <p><strong>设置docker开机自启动如下：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure></p>
 <p><strong>docker搜索镜像，tomcat举例</strong><br>输入地址官方地址 <a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a></p>
-<p>搜索tomcat<br><img src="http://s1.wailian.download/2020/04/20/xx1.png" alt=""></p>
+<p>搜索tomcat<br><img src="http://ys-i.ys168.com/615879126/j465L263542QWIjNkfou/2020-4-20-01.png" alt=""></p>
 <p><strong>查看docker latest具体版本</strong></p>
 <p>nginx版本<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker image inspect nginx:latest | grep -i version</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://s1.wailian.download/2020/04/20/xx2.png" alt=""></p>
+<p><img src="http://ys-i.ys168.com/615879126/j465L263542QWHjNkfou/2020-4-20-02.png" alt=""></p>
 <p>tomcat版本</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker image inspect tomcat:latest | grep -i version</span><br></pre></td></tr></table></figure>
-<p><img src="http://s1.wailian.download/2020/04/20/xx3.png" alt=""></p>
+<p><img src="http://ys-i.ys168.com/615879126/j465L263542QW6jNkfou/2020-4-20-03.png" alt=""></p>
 <p><strong>查看 docker 容器使用的资源</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stats --no-stream</span><br></pre></td></tr></table></figure>
 <p>默认情况下，stats 命令会每隔 1 秒钟刷新一次输出的内容直到你按下 ctrl + c。下面是输出的主要内容：<br>[CONTAINER]：以短格式显示容器的 ID。<br>[CPU %]：CPU 的使用情况。<br>[MEM USAGE / LIMIT]：当前使用的内存和最大可以使用的内存。<br>[MEM %]：以百分比的形式显示内存使用情况。<br>[NET I/O]：网络 I/O 数据。<br>[BLOCK I/O]：磁盘 I/O 数据。<br>[PIDS]：PID 号。</p>

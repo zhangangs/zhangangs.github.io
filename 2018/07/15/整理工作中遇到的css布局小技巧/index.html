@@ -2,7 +2,7 @@
 <p><strong> 本文将持续更新。（首次更新于：2017-7-28） </strong></p>
 <p><strong> 1、小图标垂直居中，负边距的妙用 </strong></p>
 <p>使用案例：select选择框右边小图标</p>
-<p><img src="http://oxi2boc62.bkt.clouddn.com/7-28-15.png" alt=""></p>
+<p><img src="http://ys-j.ys168.com/615879138/u732M36327JNH7lMmbpy/7-28-15.png" alt=""></p>
 <p>这里布局很简单，图标绝对定位到右边，<code>top:50%</code>的话，由于小图标自身有高度，定位的位置会居中偏下。<br>按照以前的方式我会减少top值，比如说改到45%，让它位置向上些。如果用到负边距，能很简单的解决这个问题，<code>margin-top</code> 设置为它自身的高度即可。即 <code>-10px</code>。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line"><span class="selector-tag">right</span>: 8<span class="selector-tag">px</span>;</span><br><span class="line"><span class="selector-tag">top</span>: 50%;</span><br><span class="line">margin-top: -10px;  //设置为负值，自身高度</span><br><span class="line"><span class="selector-tag">font-size</span>: 20<span class="selector-tag">px</span>;</span><br></pre></td></tr></table></figure>
 <p><strong> 2、文字强制一行显示，多余文字隐藏并加上省略号 </strong></p>

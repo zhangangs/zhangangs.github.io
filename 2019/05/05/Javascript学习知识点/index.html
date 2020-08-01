@@ -3,7 +3,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">0.3</span> - <span class="number">0.2</span>; <span class="comment">//结果是多少？</span></span><br></pre></td></tr></table></figure>
 <p>这里的结果是：0.09999999999999998， 不是0.1，是不是很惊讶！</p>
 <p><strong> 更神奇的还在后面！ </strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//循环显示10条相减的信息</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; <span class="number">11</span>; i++)&#123;</span><br><span class="line">  <span class="keyword">var</span> j = i + <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">console</span>.log((j / <span class="number">10</span>) + <span class="string">"-"</span> + (i / <span class="number">10</span>) + <span class="string">"="</span> + (( j / <span class="number">10</span>) - (i / <span class="number">10</span>)), i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>结果如下：<br><img src="http://oxi2boc62.bkt.clouddn.com/8-7-1.jpg" alt=""></p>
+<p>结果如下：<br><img src="http://ys-j.ys168.com/615879110/t524L52466IMKKkLldst/8-7-1.jpg" alt=""></p>
 <p>除了<code>0.2-0.1</code>算对了，其他的都不对，不是大点就是小点。</p>
 <p>这是由于二进制浮点数不能精确的表示简单的浮点数， 例如：0.1，只能表示一个及其近似的值。</p>
 <p><strong>决解方法也很简单,转换成整数计算即可避免这个问题。</strong></p>
