@@ -4,7 +4,7 @@ tags: 分享
 author: zhangangs
 date: 2017-6-21
 ---
-![](http://oxi2boc62.bkt.clouddn.com/6-21-1.jpg)
+![](http://ys-j.ys168.com/615879147/kOictxr853K44714Q6I/6-21-1.jpg)
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=3&id=901854654&auto=1&height=66"></iframe>
 
 

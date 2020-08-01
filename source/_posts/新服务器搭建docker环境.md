@@ -27,7 +27,7 @@ systemctl enable docker
 输入地址官方地址 https://hub.docker.com/
 
 搜索tomcat
-![](http://s1.wailian.download/2020/04/20/xx1.png)
+![](http://ys-i.ys168.com/615879126/j465L263542QWIjNkfou/2020-4-20-01.png)
 
 **查看docker latest具体版本**
 
@@ -35,14 +35,14 @@ nginx版本
 ``` js
 docker image inspect nginx:latest | grep -i version
 ```
-![](http://s1.wailian.download/2020/04/20/xx2.png)
+![](http://ys-i.ys168.com/615879126/j465L263542QWHjNkfou/2020-4-20-02.png)
 
 tomcat版本
 
 ``` js
 docker image inspect tomcat:latest | grep -i version
 ```
-![](http://s1.wailian.download/2020/04/20/xx3.png)
+![](http://ys-i.ys168.com/615879126/j465L263542QW6jNkfou/2020-4-20-03.png)
 
 
 **查看 docker 容器使用的资源**

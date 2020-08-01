@@ -4,7 +4,7 @@ tags: 分享
 author: zhangangs
 date: 2018-7-24
 ---
-![](http://oxi2boc62.bkt.clouddn.com/2018-7-24-01.jpg)
+![](http://ys-j.ys168.com/615879143/kOictxt551K66526UPS5/2018-7-24-01.jpg)
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=3&id=908038700&auto=1&height=66"></iframe>
 > 此曲只应天上有，人间难得几回闻啊，不要问我为什么，就是喜欢。![](http://tb2.bdstatic.com/tb/editor/images/tsj/t_0035.gif)
 

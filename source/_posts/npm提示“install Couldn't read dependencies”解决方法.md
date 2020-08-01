@@ -8,14 +8,14 @@ date: 2017-5-12
 
 如下所示：
 
-![node](http://oxi2boc62.bkt.clouddn.com/5-12-01.png)
+![node](http://ys-j.ys168.com/615879136/p465L25553TQW3lMmbpy/5-12-01.png)
 
 检查了一下，发现是空格的原因，我多敲了几下空格，如下所示：
 
-![node](http://oxi2boc62.bkt.clouddn.com/5-12-02.png)
+![node](http://ys-j.ys168.com/615879136/p465L25553TQW4lMmbpy/5-12-02.png)
 
 去掉后，重新安装依赖，这次成功。
 
-![node](http://oxi2boc62.bkt.clouddn.com/5-12-03.png)
+![node](http://ys-j.ys168.com/615879137/lMmbpyr853K44714XPU4/5-12-03.png)
 
 完成！

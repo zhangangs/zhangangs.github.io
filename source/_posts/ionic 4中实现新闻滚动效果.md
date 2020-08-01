@@ -7,7 +7,7 @@ date: 2019-3-23
 
 最近在做一个app项目，需要实现新闻滚动效果，如下所示：
 
-![](http://www.wailian.work/images/2019/03/23/11.gif)
+![](http://ys-i.ys168.com/615879126/j465L263534QKKjNkfou/2019-3-23.gif)
 <small>(截图的图片有点卡)</small>
 
 

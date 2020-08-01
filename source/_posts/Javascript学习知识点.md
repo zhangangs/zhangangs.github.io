@@ -24,7 +24,7 @@ for(var i = 1; i < 11; i++){
 }
 ```
 结果如下：
-![](http://oxi2boc62.bkt.clouddn.com/8-7-1.jpg)
+![](http://ys-j.ys168.com/615879110/t524L52466IMKKkLldst/8-7-1.jpg)
 
 除了` 0.2-0.1 `算对了，其他的都不对，不是大点就是小点。
 
