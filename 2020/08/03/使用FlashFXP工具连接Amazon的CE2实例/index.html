@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="zh"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="apple-mobile-web-app-title" content="飞鱼"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f0f0f0"><meta name="theme-color" content="#ffffff"><link rel="manifest" href="/manifest.json"><meta name="keywords" content="飞鱼,前端,技术博客,心情日记"><meta name="description" content="随手记录工作生活中的点点滴滴,让普通的生活中多一点小小的惊喜..."><title>使用FlashFXP，密钥方式连接Amazon的CE2实例-飞鱼</title><link rel="apple-touch-icon" href="/images/android-chrome-192x192.png"><link rel="stylesheet" href="/css/normalize.css"><link rel="stylesheet" href="/css/hexo-theme-adoubi.css"><link rel="icon" href="/images/favicon.ico"></head><body><div class="content"><div class="author-info post-header"><a href="/archives/" title="返回列表页"><img src="/images/icon_face.jpg"></a><a class="jump" href="#" title="返回列表页" onclick="history.back(-1)"> <img src="/images/icon-back.svg"><span>返回</span></a></div><h4 class="post-title-wrapper"><p class="post-title">使用FlashFXP，密钥方式连接Amazon的CE2实例</p></h4><div class="post-date"><p>Author:<a href="/about">飞鱼</a></p><p>Date:<time datetime="2020-08-02T16:00:00.000Z">2020-08-03</time></p></div><div class="post-content"><p><strong>操作步骤如下：</strong></p>
+<p>1、选择”站点” -&gt; “密钥管理器”</p>
+<p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOK6/2020-8-3-1.png" alt=""></p>
+<p>2、选择”导入” </p>
+<p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOK5/2020-8-3-2.png" alt=""></p>
+<p>3、名称随意填，<br>类型选择”用于SFTP的RSA/DSA密钥”<br>公钥文件选择”下载到本地的密钥 “，<br>其他配置默认即可<br>完成后，点击保存</p>
+<p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOJW/2020-8-3-3.png" alt=""></p>
+<p>4、选择”站点” -&gt; “站点管理器”</p>
+<p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOJN/2020-8-3-4.png" alt=""></p>
+<p>5、点击”新建站点”,站点名为aws，名称随便命名即可</p>
+<p><img src="http://ys-j.ys168.com/615879122/h635J2953H4NMHjNkfou/2020-8-3-7.png" alt=""></p>
+<p>6、配置站点<br>地址为实例的”DNS地址”(实例上可以查看)<br>连接类型选择”SFTP over SSH”<br>登录类型选择”基于密钥”<br>用户名为”ubuntu”<br>专用密钥选择”aws”<br>其他配置默认即可</p>
+<p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOJM/2020-8-3-5.png" alt=""></p>
+<p>7、完成，默认文件夹/home/ubuntu/</p>
+<p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOJL/2020-8-3-6.png" alt=""></p>
+</div></div><div class="footer"><div class="footer-copyright">Theme By <a href="https://github.com/shinux/hexo-theme-adoubi" target="_blank">Adoubi</a> , Modify By <a href="https://github.com/zhangangs" target="_blank">Veiss</a>, Powered By Hexo.</div></div></body></html>

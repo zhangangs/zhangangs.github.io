@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhangangs.github.io/"/>
-  <updated>2020-04-19T18:00:41.197Z</updated>
+  <updated>2020-08-02T17:11:16.190Z</updated>
   <id>https://zhangangs.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用FlashFXP，密钥方式连接Amazon的CE2实例</title>
+    <link href="https://zhangangs.github.io/2020/08/03/%E4%BD%BF%E7%94%A8FlashFXP%E5%B7%A5%E5%85%B7%E8%BF%9E%E6%8E%A5Amazon%E7%9A%84CE2%E5%AE%9E%E4%BE%8B/"/>
+    <id>https://zhangangs.github.io/2020/08/03/使用FlashFXP工具连接Amazon的CE2实例/</id>
+    <published>2020-08-02T16:00:00.000Z</published>
+    <updated>2020-08-02T17:11:16.190Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>操作步骤如下：</strong></p><p>1、选择”站点” -&gt; “密钥管理器”</p><p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOK6/2020-8-3-1.png" alt=""></p><p>2、选择”导入” </p><p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOK5/2020-8-3-2.png" alt=""></p><p>3、名称随意填，<br>类型选择”用于SFTP的RSA/DSA密钥”<br>公钥文件选择”下载到本地的密钥 “，<br>其他配置默认即可<br>完成后，点击保存</p><p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOJW/2020-8-3-3.png" alt=""></p><p>4、选择”站点” -&gt; “站点管理器”</p><p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOJN/2020-8-3-4.png" alt=""></p><p>5、点击”新建站点”,站点名为aws，名称随便命名即可</p><p><img src="http://ys-j.ys168.com/615879122/h635J2953H4NMHjNkfou/2020-8-3-7.png" alt=""></p><p>6、配置站点<br>地址为实例的”DNS地址”(实例上可以查看)<br>连接类型选择”SFTP over SSH”<br>登录类型选择”基于密钥”<br>用户名为”ubuntu”<br>专用密钥选择”aws”<br>其他配置默认即可</p><p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOJM/2020-8-3-5.png" alt=""></p><p>7、完成，默认文件夹/home/ubuntu/</p><p><img src="http://ys-j.ys168.com/615879141/kOictxl443N15656TOJL/2020-8-3-6.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;操作步骤如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、选择”站点” -&amp;gt; “密钥管理器”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ys-j.ys168.com/615879141/kOictxl443N15656TOK6/2020-8-3-1.p
+      
+    
+    </summary>
+    
+    
+      <category term="Amazon" scheme="https://zhangangs.github.io/tags/Amazon/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Amazon免费CE2基于docker部署nginx,并实现访问</title>
+    <link href="https://zhangangs.github.io/2020/08/02/Amazon%E5%85%8D%E8%B4%B9%E7%9A%84CE2%E5%9F%BA%E4%BA%8Edocker%E9%83%A8%E7%BD%B2nginx,%E5%B9%B6%E5%AE%9E%E7%8E%B0%E8%AE%BF%E9%97%AE/"/>
+    <id>https://zhangangs.github.io/2020/08/02/Amazon免费的CE2基于docker部署nginx,并实现访问/</id>
+    <published>2020-08-01T16:00:00.000Z</published>
+    <updated>2020-08-02T17:09:56.614Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>在部署之前，请确保你已经申请好了CE2免费的服务器，网上的相关教程很多，可以自由参考。</strong></p><p><strong>一、使用xshell+公钥连接实例</strong></p><p> 1、打开xshell，导入密钥，<br> 选择”工具” -&gt; “用户密钥管理者” -&gt; 导入，选择密钥，确认</p><p> <img src="http://ys-d.ys168.com/615879157/mKjgsvh853K45743OPJJ/2020-8-2-01.png" alt=""></p><p> 2、新建会话，选择”文件” -&gt; “新建”</p><p> 名称随便填写，<br> 协议选择”SSH”<br> 主机填写”实例的DSN地址”<br> 其他默认即可</p><p> <img src="http://ys-d.ys168.com/615879156/f465L26582KQLImKjgsv/2020-8-2-02.png" alt=""></p><p>用户身份认证<br>连接方式选择”public_key”<br>用户名”ubuntu”(不可修改,根据实例的不同固定的几个用户名)<br>密钥选择”刚才上传的密钥”</p><p><img src="http://ys-d.ys168.com/615879156/f465L26582KQLHmKjgsv/2020-8-2-03.png" alt=""></p><p>3、点击”连接按钮”，显示如下信息，表示连接成功</p><p><img src="http://ys-d.ys168.com/615879156/f465L26582KQL6mKjgsv/2020-8-2-04.png" alt=""></p><p><strong>二、安装docker容器</strong></p><p>1、更新ubuntu的apt源索引<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></p><p>2、安装docker<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get -y install docker.io</span><br></pre></td></tr></table></figure></p><p>3、检测docker版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker -v</span><br></pre></td></tr></table></figure></p><p>都能正常执行，则表示安装成功！</p><p><strong>三、拉取nginx镜像文件</strong></p><p>1、搜索nginx镜像文件,这里有很多版本，我们选择第一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker search nginx</span><br></pre></td></tr></table></figure></p><p>2、拉取镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker pull nginx</span><br></pre></td></tr></table></figure></p><p>3、查看镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker images</span><br></pre></td></tr></table></figure></p><p><strong>四、新建nginx容器</strong></p><p>输入命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -d -p 8080:80 --name test nginx</span><br></pre></td></tr></table></figure></p><p>我们在服务器的8080端口，新建了一个容器，<code>暂时还不能访问。</code></p><p><strong>五、配置安全规则</strong></p><p>1、打开官网，选择安全组，新建安全组</p><p><img src="http://ys-j.ys168.com/615879140/k524L542655MIIkOictx/2020-8-2-05.png" alt=""></p><p>2、配置入站规则，<br>类型选择”自定义TCP”,<br>端口选择”8080”，<br>源选择”0.0.0.0/0”，<br>点击确定</p><p><img src="http://ys-j.ys168.com/615879140/k524L542655MIHkOictx/2020-8-2-06.png" alt=""></p><p>3、分配规则给实例<br>选中实例 -&gt; “操作” -&gt; “联网” -&gt; “更改安全组”</p><p><img src="http://ys-j.ys168.com/615879139/lMmbpyn524L542655MI6/2020-8-2-07.png" alt=""></p><p>勾选新建的”nginx”安全组，点击”分配安全组”</p><p><img src="http://ys-j.ys168.com/615879139/lMmbpyn524L542655MI5/2020-8-2-08.png" alt=""></p><p>配置完成，通过公网IP地址加上端口8080，即可成功访问。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;在部署之前，请确保你已经申请好了CE2免费的服务器，网上的相关教程很多，可以自由参考。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一、使用xshell+公钥连接实例&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; 1、打开xshell，导入密钥，&lt;br&gt; 选择”工具
+      
+    
+    </summary>
+    
+    
+      <category term="Amazon" scheme="https://zhangangs.github.io/tags/Amazon/"/>
+    
+  </entry>
   
   <entry>
     <title>第三部分：docker安装mssql</title>
@@ -454,54 +504,6 @@
     
     
       <category term="VMware" scheme="https://zhangangs.github.io/tags/VMware/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用oclazyload.js自动引用bower安装的第三方插件</title>
-    <link href="https://zhangangs.github.io/2018/07/31/%E4%BD%BF%E7%94%A8oclazyload.js%E8%87%AA%E5%8A%A8%E5%BC%95%E7%94%A8bower%E5%AE%89%E8%A3%85%E7%9A%84%E6%8F%92%E4%BB%B6/"/>
-    <id>https://zhangangs.github.io/2018/07/31/使用oclazyload.js自动引用bower安装的插件/</id>
-    <published>2018-07-30T16:00:00.000Z</published>
-    <updated>2018-12-01T08:31:57.599Z</updated>
-    
-    <content type="html"><![CDATA[<p>还是在工作中遇到的问题，在项目改造中，我们使用了<code>oclazyload.js</code>来实现js按需加载，第三方插件当然也需要按需引用。</p><p>但是使用<code>oclazyload.js</code>需要遵行它的加载标准，需要使用的插件，按json格式引用到<code>modules</code>，大概需要像如下这样使用：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">    'use strict'</span>;</span><br><span class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">'app'</span>);</span><br><span class="line">    <span class="comment">//按需加载,modules内容为gulp自动化处理</span></span><br><span class="line">    app.config([<span class="string">'$ocLazyLoadProvider'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$ocLazyLoadProvider</span>) </span>&#123;</span><br><span class="line">        $ocLazyLoadProvider.config(&#123;</span><br><span class="line">            debug: <span class="literal">true</span>, <span class="comment">//调试模式</span></span><br><span class="line">            events: <span class="literal">true</span>,<span class="comment">//广播事件</span></span><br><span class="line">            modules: [  </span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">"name"</span>:<span class="string">"angular"</span>,</span><br><span class="line">                    <span class="string">"files"</span>:<span class="string">"bower_components/angular/angular.js"</span></span><br><span class="line">                &#125;,&#123;</span><br><span class="line">                    <span class="string">"name"</span>:<span class="string">"ui-navbar"</span>,</span><br><span class="line">                    <span class="string">"files"</span>:[</span><br><span class="line">                        <span class="string">"bower_components/ui-navbar/release/js/ui-navbar.js"</span>,</span><br><span class="line">                        <span class="string">"bower_components/ui-navbar/release/css/ui-navbar.css"</span></span><br><span class="line">                    ]</span><br><span class="line">                &#125;</span><br><span class="line">                ...</span><br><span class="line">            ]</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;]);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p><p>这样使用有个小问题需要解决，我们原来有很多的第三方插件，7、80个插件的样子，手动一个一个的引用进来，是可以用，但是如果又安装了新的插件，还是需要手动引用，这样很麻烦，而且手动引用难免出错。</p><p>我就寻思着，能不能自动加载<code>bower</code>安装的三方插件到<code>modules</code>中。找来找去没有找到类似的插件，那就自己写个吧。</p><p>于是，就写了个<code>gulp</code>任务，思路如此这般：<strong>找到bower_components地址，循环里面的文件夹，找到每个文件夹下的bower.json文件，再读取bower.json中的main字段，组合返回需要的json字段，再找到目标文件，写入需要的JSON。</strong></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取bower.json中插件的引用地址,写入app.config.js中</span></span><br><span class="line">gulp.task(<span class="string">'bmap'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//文件地址</span></span><br><span class="line">    <span class="keyword">var</span> filePath = path.join(__dirname, <span class="string">'client/bower_components'</span>),</span><br><span class="line">        <span class="comment">//文件夹下面的所有文件</span></span><br><span class="line">        files = fs.readdirSync(filePath),</span><br><span class="line">        <span class="comment">//需要返回的数据</span></span><br><span class="line">        bowerJson = [];</span><br><span class="line"></span><br><span class="line">    <span class="comment">//循环读取文件夹</span></span><br><span class="line">    files.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> subPath = filePath + <span class="string">"/"</span> + item,</span><br><span class="line">            subFile = fs.readdirSync(subPath);</span><br><span class="line"></span><br><span class="line">        subFile.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">subItem, subIndex</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> path = subPath + <span class="string">"/bower.json"</span>;</span><br><span class="line">            <span class="keyword">if</span> (subItem == <span class="string">'bower.json'</span>) &#123;</span><br><span class="line">                <span class="comment">//同步方式读取bower.json文件</span></span><br><span class="line">                <span class="keyword">var</span> bowerData = fs.readFileSync(path, <span class="string">'utf-8'</span>),</span><br><span class="line">                    <span class="comment">//把bower.json字符串文件转换成json，提供给后续操作</span></span><br><span class="line">                    result = <span class="built_in">JSON</span>.parse(bowerData),</span><br><span class="line">                    <span class="comment">//返回的信息</span></span><br><span class="line">                    info = &#123;</span><br><span class="line">                        name: result.name,</span><br><span class="line">                        files: <span class="string">''</span></span><br><span class="line">                    &#125;;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//路径截取,保留bower_components/rangyrangy-core.js</span></span><br><span class="line">                subPath = subPath.substring(subPath.lastIndexOf(<span class="string">"bower_components\/"</span>), subPath.length);</span><br><span class="line"></span><br><span class="line">                <span class="comment">//main字段有值才做处理;没有值，表示插件不规范，只能用户手动引入</span></span><br><span class="line">                <span class="keyword">if</span> (result.main) &#123;</span><br><span class="line">                    <span class="comment">//字符串和数组分开处理</span></span><br><span class="line">                    <span class="keyword">if</span> (<span class="keyword">typeof</span> (result.main) == <span class="string">'string'</span>) &#123;</span><br><span class="line">                        result.main = result.main.replace(<span class="string">'.\/'</span>, <span class="string">''</span>);</span><br><span class="line">                        info.files = subPath + <span class="string">'\/'</span> + result.main;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//数组,循环替换路径</span></span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> (result.main) == <span class="string">'object'</span>) &#123;</span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> result.main) &#123;</span><br><span class="line">                            result.main[i] = result.main[i].replace(<span class="string">'.\/'</span>, <span class="string">''</span>);</span><br><span class="line">                            result.main[i] = subPath + <span class="string">'\/'</span> + result.main[i];</span><br><span class="line">                        &#125;</span><br><span class="line">                        info.files = result.main;</span><br><span class="line">                    &#125;</span><br><span class="line">                    bowerJson.push(info);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (bowerJson.length) &#123;</span><br><span class="line">        <span class="comment">//把bowerJson注入到文件中app.config.js文件中</span></span><br><span class="line">        injectBowerJson(bowerJson);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">injectBowerJson</span>(<span class="params">bowerJson</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> configPath = path.join(__dirname, <span class="string">'client/app/app.config.js'</span>),</span><br><span class="line">            file = fs.readFileSync(configPath, <span class="string">'utf-8'</span>),</span><br><span class="line">            <span class="comment">//正则表达式替换文件</span></span><br><span class="line">            result = file.replace(<span class="regexp">/\[\&#123;.*?\&#125;\]/g</span>, <span class="built_in">JSON</span>.stringify(bowerJson));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//写入文件</span></span><br><span class="line">        fs.writeFileSync(configPath, result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>完成。没有找到其他的使用场景，不然可以写成插件。（^_^）</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;还是在工作中遇到的问题，在项目改造中，我们使用了&lt;code&gt;oclazyload.js&lt;/code&gt;来实现js按需加载，第三方插件当然也需要按需引用。&lt;/p&gt;
-&lt;p&gt;但是使用&lt;code&gt;oclazyload.js&lt;/code&gt;需要遵行它的加载标准，需要使用的插件，按json
-      
-    
-    </summary>
-    
-    
-      <category term="bower" scheme="https://zhangangs.github.io/tags/bower/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>音乐分享：Symphony (Cover by J.Fla)</title>
-    <link href="https://zhangangs.github.io/2018/07/24/%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB%EF%BC%9ASymphony%20(Cover%20by%20J.Fla)/"/>
-    <id>https://zhangangs.github.io/2018/07/24/音乐分享：Symphony (Cover by J.Fla)/</id>
-    <published>2018-07-23T16:00:00.000Z</published>
-    <updated>2020-08-01T16:13:55.473Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://ys-j.ys168.com/615879143/kOictxt551K66526UPS5/2018-7-24-01.jpg" alt=""></p><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=3&id=908038700&auto=1&height=66"></iframe></p><blockquote><p>此曲只应天上有，人间难得几回闻啊，不要问我为什么，就是喜欢。<img src="http://tb2.bdstatic.com/tb/editor/images/tsj/t_0035.gif" alt=""></p></blockquote><p><strong>MV地址：<a href="https://music.163.com/#/mv?id=5468230" target="_blank" rel="noopener">Symphony(Cover by J.Fla)</a>，博主无私分享！</strong></p><p><strong>翻译对照</strong><br>I’ve been hearing symphonies<br>我亲耳听见爱的交响曲</p><p>Before all I heard was silence<br>一切都沉默无声前</p><p>A rhapsody for you and me<br>这是专属你我之间的狂想曲</p><p>And every melody is timeless<br>每一段旋律都是永恒定格的</p><p>Life was stringing me along<br>生活像是将我们玩于股掌</p><p>Then you came and you cut me loose<br>直至你来将我解救</p><p>Was solo singing on my own<br>孤独无比的内心在独唱</p><p>Now I can’t find the key without you<br>如今无你我已找不到任何生存的意义</p><p>And now your song is on repeat<br>现在你的歌声回响在我的耳旁</p><p>And I’m dancin’ on, to your heartbeat<br>我每一次的纷纷起舞都会牵动着你的心跳</p><p>And when you’re gone, I feel incomplete<br>曲终人散，我不再完整无恙</p><p>So if you want the truth<br>若你想知道我心之所向</p><p>I just wanna be part of your symphony<br>我只想与你共同合唱交响乐</p><p>Will you hold me tight and not let go?<br>你会紧抱我，不会任其远走吗</p><p>Symphony<br>那爱的交响乐</p><p>Like a love song on the radio<br>就像收音机里的情歌</p><p>Will you hold me tight and not let go?<br>你会紧抱我，不会任其远走吗</p><p>I’m sorry if it’s all too much<br>若我言之过多，那么很抱歉</p><p>Every day you’re here, I’m healing<br>你存在的每一天，我的心像是得到治愈</p><p>And I was runnin’ outta luck<br>我很幸运</p><p>I never thought I’d find this feeling<br>我未想过会有心之萌动的感觉</p><p>‘Cause I’ve been hearing symphonies<br>因为我亲耳听见爱的交响乐</p><p>Before all I heard was silence<br>在我的内心是毫无波澜前</p><p>A rhapsody for you and me<br>专属你我的狂想曲</p><p>And every melody is timeless<br>每一段旋律都是永恒定格的</p><p>And now your song is on repeat<br>现在你的歌声回响在我的耳旁</p><p>And I’m dancin’ on, to your heartbeat<br>我每一次的纷纷起舞都会牵动着你的心跳</p><p>And when you’re gone, I feel incomplete<br>曲终人散，我不再完整无恙</p><p>So if you want the truth<br>若你想知道我心之所向</p><p>I just wanna be part of your symphony<br>我只想与你共同合唱交响乐</p><p>Will you hold me tight and not let go?<br>你会紧抱我，不会任其远走吗</p><p>Symphony<br>爱的交响</p><p>Like a love song on the radio<br>就像收音机里的情歌</p><p>Will you hold me tight and not let go?<br>你会紧抱我，不会任其远走吗</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;http://ys-j.ys168.com/615879143/kOictxt551K66526UPS5/2018-7-24-01.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; margi
-      
-    
-    </summary>
-    
-    
-      <category term="分享" scheme="https://zhangangs.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
